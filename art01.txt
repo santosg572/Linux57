@@ -64,10 +64,16 @@ Lotka-Volterra no autónomos con retrasos temporales (véase [3]).
 x ˙ 1 (t) = x 1 (t)[r 1 (t) − a 11 1 (t)x 1 (t − τ) − a 11 2 (t)x 1 (t − 2τ) + a 12 1 (t)x 2 (t − τ)], { x ˙ 2 
 (t) = x 2 (t)[r 2 (t) + a 21 0 (t)x 1 (t) + a 21 1 (t)x 1 (t − τ) − a 22 0 (t)x 2 (t) − a 22 1 (t)x 2 (t − τ)],
 
-(2) where x i (t)(i = 1, 2) denote the density of i-species at time t, τ is a positive constant and r i (t), a ij l 
+where xi(t)(i = 1, 2) denote the density of i-species at time t, τ is a positive constant and ri(t), aijl 
 (t) (1 ≤ i, j ≤ 2; 0 ≤ l ≤ 2) are continuous, bounded and strictly positive functions as t ∈ [−τ, + ∞). They 
 obtained some sufficient conditions for the permanence of the system (2). Xu and Zu [4] investigated the following 
 two-species delayed competitive model with stage structure and harvesting
+
+Donde xi(t)(i = 1, 2) denota la densidad de i-especies en el tiempo t, τ es una constante positiva y ri(t), aijl (t) 
+(1 ≤ i, j ≤ 2; 0 ≤ l ≤ 2) son funciones continuas, acotadas y estrictamente positivas cuando t ∈ [−τ, + ∞]. 
+Obtuvieron algunas condiciones suficientes para la permanencia del sistema (2). Xu y Zu [4] investigaron el siguiente 
+modelo competitivo retardado de dos especies con estructura de etapas y cosecha.
+
 
 dx 1 (t) ⎪ ⎪ ⎧ ⎪ ⎪ = α(t)x 2 (t) − γ x 1 (t) − α(t − τ)e −γ τ x 2 (t − τ), ⎪ ⎪ dt dx 2 (t) = α(t − τ)e 
 −γ τ x 2 (t − τ) − β(t)x 2 2 (t) − a 1 (t)x 2 (t)y(t) − E(t)x 2 (t), ⎪ ⎪ ⎨ dt ⎪ ⎪ ⎪ ⎪ dy(t) = y(t)(r 1 (t) 
@@ -76,6 +82,10 @@ dx 1 (t) ⎪ ⎪ ⎧ ⎪ ⎪ = α(t)x 2 (t) − γ x 1 (t) − α(t − τ)e −
 By using the differential inequality theory, some new sufficient conditions which ensure the permanence of the system 
 are established. In [5], the authors considered the following competitor-competitor–mutualist Lotka–Volterra systems 
 with discrete time delays
+
+Mediante la teoría de la desigualdad diferencial, se establecen nuevas condiciones suficientes que garantizan la 
+permanencia del sistema. En [5], los autores consideraron los siguientes sistemas Lotka-Volterra 
+competidor-competitivo-mutualista con retardos discretos.
 
 x ˙ 1 (t) = x 1 (t)[r 1 (t) − a 11 1 (t)x 1 (t − τ) − a 11 2 (t)x 1 (t − 2τ) − a 12 (t)x 2 (t − 2τ) ⎪ ⎪ ⎧ ⎪ 
 ⎪ a 13 (t)x 3 (t − τ)], ⎪ ⎪ + x ˙ 2 (t) = x 2 (t)[r 2 (t) − a 21 (t)x 1 (t − 2τ) − a 22 1 (t)x 2 (t − τ) − a 
@@ -88,6 +98,10 @@ And some sufficient conditions which guarantee the boundedness, permanence and g
 obtained. In 2011, Xu et al. [6] studied the dynamical behaviours for the following Lokta–Volterra predator–prey model 
 with two delays
 
+Se obtuvieron condiciones suficientes que garantizan la acotación, la permanencia y la atracción global del sistema 
+(4). En 2011, Xu et al. [6] estudiaron los comportamientos dinámicos del siguiente modelo depredador-presa de 
+Lokta-Volterra con dos retrasos.
+
 x ˙ 1 (t) = x 1 (t)[r 1 − a 11 x 1 (t − τ 1 ) − a 12 y(t − τ 2 )], { x ˙ 2 (t) = x 2 (t)[−r 2 − a 21 x 1 (t − τ 
 1 ) − a 22 y(t − τ 2 )].
 
@@ -96,6 +110,11 @@ x ˙ 1 (t) = x 1 (t)[r 1 − a 11 x 1 (t − τ 1 ) − a 12 y(t − τ 2 )], { 
 Its linear stability and Hopf bifurcation are investigated by analysing the associated characteristic transcendental 
 equation. Some explicit formulate for determining the stability and the direction of the Hopf bifurcation periodic 
 solutions are obtained by using normal form theory and centre manifold theory.
+
+Se investiga su estabilidad lineal y la bifurcación de Hopf mediante el análisis de la ecuación trascendental 
+característica asociada. Se obtienen fórmulas explícitas para determinar la estabilidad y la dirección de las 
+soluciones periódicas de la bifurcación de Hopf mediante la teoría de la forma normal y la teoría de la variedad 
+central.
 
 One can find that an ecosystem in the real world is continuously distributed by some forces, which can result in 
 changes in the biological parameters such as survival rates. The practical interest in ecology is the question of 
@@ -107,16 +126,28 @@ harvesting procedure. In fact, during the last decade, the qualitative behaviour
 feedback control has been studied extensively. In 2009, Nie et al. [12] considered the following non-autonomous 
 predator–prey Lotka–Volterra system with feedback controls
 
+En la vida real, un ecosistema se distribuye continuamente por ciertas fuerzas, lo que puede provocar cambios en 
+parámetros biológicos como las tasas de supervivencia. El interés práctico en ecología radica en determinar si un 
+ecosistema puede soportar perturbaciones que persisten durante un período finito. En los sistemas de control, 
+consideramos las funciones de perturbación como variables de control. Estas son importantes para controlar el 
+equilibrio ecológico. Uno de los métodos para investigarlo es alterar la estructura del sistema mediante la 
+introducción de variables de control de retroalimentación. El mecanismo de control de retroalimentación podría 
+implementarse mediante esquemas de control biológico o procedimientos de cosecha. De hecho, durante la última década, 
+se ha estudiado ampliamente el comportamiento cualitativo de la dinámica poblacional con control de retroalimentación. 
+En 2009, Nie et al. [12] consideraron el siguiente sistema Lotka-Volterra depredador-presa no autónomo con controles 
+de retroalimentación.
+
+
 x ˙ 1 (t) = x 1 (t)[b 1 (t) − a 11 (t)x 1 (t) − a 12 (t)x 2 (t) + c 1 (t)u 1 (t)], ⎪ ⎪ ⎧ ⎪ x ˙ 2 (t) = x 2 
 (t)[−b 2 (t) + a 21 (t)x 1 (t) − a 22 (t)x 2 (t) − c 2 (t)u 2 (t)], ⎪ ⎪ ⎨ u ˙ 1 (t) = f 1 (t) − e 1 (t)u 1 (t) 
 − d 1 (t)x 1 (t), ⎪ ⎩ u ˙ 2 (t) = −e 2 (t)u 2 (t) + d 2 (t)x 2 (t),
 
 (6)
 
-where x 1 (t) is the prey population density and x 2 (t) is the predator population density, b 1 (t) and a 11 (t) are 
-the intrinsic growth rate and density-dependent coefficient of the prey, respectively; b 2 (t) and a 22 (t) are the 
-intrinsic growth rate and densitydependent coefficient of the predator, respectively; a 12 (t) is the capturing rate 
-of the predator and a 21 (t) is the rate of conversion of nutrient into the reproduction of the predator; u i (t)(i = 
+where x1(t) is the prey population density and x2(t) is the predator population density, b1(t) and a11(t) are 
+the intrinsic growth rate and density-dependent coefficient of the prey, respectively; b2(t) and a 22 (t) are the 
+intrinsic growth rate and densitydependent coefficient of the predator, respectively; a12(t) is the capturing rate 
+of the predator and a21(t) is the rate of conversion of nutrient into the reproduction of the predator; ui(t)(i = 
 1, 2) are control variables. They studied whether or not the feedback controls have an influence on the permanence of 
 a positive solution of the general nonautonomous predator–prey Lotka–Volterra-type systems and establish the general 
 criteria on the permanence of system (6), which is independent of some feedback controls. In addition, by constructing 
@@ -124,19 +155,35 @@ an appropriate Lyapunov function, some sufficient conditions are obtained for th
 solution to system (6). In [13], Yang, Wang and Chen proposed and studied the following cooperation system with 
 feedback controls
 
+donde x1(t) es la densidad de población de la presa y x2(t) es la densidad de población del depredador, b1(t) y a11(t) 
+son la tasa de crecimiento intrínseca y el coeficiente dependiente de la densidad de la presa, respectivamente; b2(t) 
+y a 22 (t) son la tasa de crecimiento intrínseca y el coeficiente dependiente de la densidad del depredador, 
+respectivamente; a12(t) es la tasa de captura del depredador y a21(t) es la tasa de conversión de nutrientes en la 
+reproducción del depredador; ui(t)(i =1, 2) son variables de control. Estudiaron si los controles de retroalimentación 
+tienen o no influencia en la permanencia de una solución positiva de los sistemas generales no autónomos 
+depredador-presa tipo Lotka-Volterra y establecen los criterios generales sobre la permanencia del sistema (6), que es 
+independiente de algunos controles de retroalimentación. Además, al construir una función de Lyapunov apropiada, se 
+obtienen algunas condiciones suficientes para la estabilidad global de cualquier solución positiva al sistema (6). En 
+[13], Yang, Wang y Chen propusieron y estudiaron el siguiente sistema de cooperación con controles de 
+retroalimentación
+
 x ˙ 1 (t) = x 1 (b 1 − a 11 x 1 (t) + a 12 x 2 (t) − α 1 u 1 (t)), ⎧ ⎪ ⎪ ⎪ x ˙ 2 (t) = x 2 (b 2 + a 21 x 1 (t) 
 − a 22 x 2 (t) − α 2 u 2 (t)), ⎪ ⎪ ⎨ u ˙ 1 (t) = −η 1 u 1 (t) + a 1 x 1 (t), ⎪ ⎩ u ˙ 2 (t) = −η 2 u 2 (t) + a 
 2 x 2 (t),
 
 (7)
 
-where b i , a ij , α i , η i , a i , i, j = 1, 2 are positive constants. x i (t), (i = 1, 2) are the densities of the 
-species at time t, u i (t), (i = 1, 2) denote feedback controls. They showed that if system (7) has a positive 
+where bi , aij , αi , ηi , ai , i, j = 1, 2 are positive constants. xi(t), (i = 1, 2) are the densities of the 
+species at time t, ui(t), (i = 1, 2) denote feedback controls. They showed that if system (7) has a positive 
 equilibrium, then feedback controls can only influence the position of the positive equilibrium, and have no influence 
 on the stability. In 2018, Wang et al. [14] considered the following three-species Lokta–Volterra predator–prey system 
-with
+with feedback
 
-feedback
+Donde bi, aij, αi, ηi, ai, i, j = 1, 2 son constantes positivas. xi(t), (i = 1, 2) son las densidades de las especies 
+en el tiempo t, ui(t), (i = 1, 2) representan controles de retroalimentación. Demostraron que si el sistema (7) tiene 
+un equilibrio positivo, entonces los controles de retroalimentación solo pueden influir en la posición del equilibrio 
+positivo y no en la estabilidad. En 2018, Wang et al. [14] consideraron el siguiente sistema depredador-presa de tres 
+especies de Lokta-Volterra con retroalimentación.
 
 a 12 (t)x 2 (t) ⎪ ⎪ ⎧ ⎪ ⎪ x ˙ 1 (t) = x 1 (t)[r 1 (t) − a 11 (t)x 1 (t) ⎪ ⎪ b 12 (t)x 2 (t) + x 1 (t) ⎪ ⎪ ⎪ 
 ⎪ a 13 (t)x 3 (t) ⎪ ⎪ − (t)u 1 (t)], ⎪ ⎪ b 13 (t)x 3 (t) + x 1 (t) − d1  ⎪ ⎪ ⎪ ⎪ a 21 (t)x 1 (t) ⎪ ⎪ x ˙ 
@@ -157,15 +204,29 @@ delay and feedback control can respond better to impersonal law. In recent years
 paid to some ecosystem models with both feedback control and time delay (see, [22–27]). In 1993, Gopalsamy et al. [22] 
 studied a class of autonomous single-species ecosystem with feedback control and time delay
 
+Mediante el uso de un teorema de comparación y la construcción de una función de Lyapunov adecuada, así como el 
+desarrollo de nuevas técnicas de análisis, los autores establecieron un conjunto de condiciones suficientes fácilmente 
+verificables que garantizan la permanencia del sistema y la atracción global de una solución positiva para el sistema 
+depredador-presa (8). Además, se obtuvieron algunas condiciones para la existencia, unicidad y estabilidad de una 
+solución periódica positiva para el sistema periódico correspondiente mediante el uso de la teoría del punto fijo y un 
+nuevo método de análisis. Se puede encontrar más información sobre controles de retroalimentación en (cf. [15–21] y 
+las referencias citadas). Como es bien sabido, el sistema Lotka-Volterra con retardo temporal y control de 
+retroalimentación puede responder mejor a la ley impersonal. En los últimos años, se ha prestado cada vez más atención 
+a algunos modelos de ecosistemas con control de retroalimentación y retardo temporal (véase [22–27]). En 1993, 
+Gopalsamy et al. [22] estudiaron una clase de ecosistema autónomo monoespecífico con control de retroalimentación y 
+retardo temporal.
+
 a1  ⎪ ⎪ ⎧ dn(t) n(t) + a 2 n(t − τ) = rn(t)[1 − ( ) − cu(t)], dt K ⎪ ⎪ ⎨ du(t) = −au(t) + bn(n − τ), ⎩ dt
 
 (9)
 
-where u(t) denotes an indirect control variable, τ, a 2 , a, b, c, r ∈ (0, ∞) and a 1 ∈ [0, ∞). Some sufficient 
+where u(t) denotes an indirect control variable, τ, a2 , a, b, c, r ∈ (0, ∞) and a 1 ∈ [0, ∞). Some sufficient 
 conditions were obtained for the global asymptotic stability of the positive equilibrium for the system (9). In order 
 to show that whether the feedback control variables play an essential role on the persistent property of 
 Lotka–Volterra cooperative systems or not, Xu and Chen [26] established and studied the following system with time 
 delay and feedback control
+
+
 
 ⎪ ⎪ ⎧ x˙ 1 (t) = x 1 (t)[r 1 (t) − a 1 (t)x 1 (t) − a 11 (t)x 1 (t − τ) + a 12 (t)x 2 (t − τ) − b 1 (t)u 1 (t 
 − σ 1 )], x˙ 2 (t) = x 2 (t)[r 2 (t) − a 2 (t)x 2 (t) + a 21 (t)x 1 (t) − a 22 (t)x 2 (t − τ) − b 2 (t)u 2 (t − 
