@@ -1,180 +1,20 @@
 \documentclass[12pt]{article}
 
 \usepackage{amsmath}
+\usepackage{comment}
 
 \begin{document}
 
-Dynamical behaviour of a Lotka–Volterra competitive-competitive–cooperative 
-model with feedback controls and time 
-delays - 2019
-
-ABSTRACT
-
-The aim of this paper is to investigate the dynamical behaviour of a class of three species Lotka–Volterra 
-competitive-competitive-cooperative models with feedback controls and time delays. By developing a new analysis 
-technique, we obtain some sufficient conditions that ensure these models have the dynamical property of permanence. We 
-also give some sufficient conditions that guarantee the global attractivity of positive solutions for this system by 
-constructing a new suitable Lyapunov function. Finally, we give some numerical simulations to illustrate our results 
-in this paper.
-
-El objetivo de este artículo es investigar el comportamiento dinámico de una clase de tres modelos Lotka-Volterra 
-competitivo-competitivo-cooperativo con controles de retroalimentación y retardos temporales. Mediante el desarrollo 
-de una nueva técnica de análisis, obtenemos condiciones suficientes que garantizan la propiedad dinámica de 
-permanencia de estos modelos. También proporcionamos condiciones suficientes que garantizan la atracción global de 
-soluciones positivas para este sistema mediante la construcción de una nueva función de Lyapunov adecuada. Finalmente, 
-presentamos algunas simulaciones numéricas para ilustrar nuestros resultados.
-
- 1. Introduction
-
-The modelling and analysis of the dynamics of biological populations by means of differential equations are of the 
-primary concern in population growth problems. A well-known and extensively studied class of models in population 
-dynamics is the Lotka–Volterra system which models certain types of interactions among various species. In the real 
-world, the growth rate of a natural species will not often respond immediately to changes in its own species or that 
-of an interacting species, but will rather do so after a time lag. Time delays are introduced to make the model 
-respond better to impersonal law (see, [1–11]).
-
-El modelado y análisis de la dinámica de poblaciones biológicas mediante ecuaciones diferenciales es fundamental en 
-los problemas de crecimiento poblacional. Un modelo bien conocido y ampliamente estudiado en dinámica poblacional es 
-el sistema Lotka-Volterra, que modela ciertos tipos de interacciones entre diversas especies. En el mundo real, la 
-tasa de crecimiento de una especie natural no suele responder inmediatamente a los cambios en su propia especie o en 
-la de una especie con la que interactúa, sino que lo hará con un cierto desfase temporal. Se introducen desfases 
-temporales para que el modelo responda mejor a la ley impersonal (véase [1–11]).
-
-Lu et al. in [2] proposed and studied the following Lotka–Volterra system with discrete delays
-
-Lu et al. en [2] propusieron y estudiaron el siguiente sistema Lotka-Volterra con retrasos discretos
-
+\begin{comment}
 \[
 \left\{\begin{matrix}
-\dot{x}_1(t) = x_1(t)[r_1 - a_1 x_1 (t) - a_{11} x_1 (t - \tau_{11} ) + a_{12} x_2 (t - \tau_{12} ) \\
-\dot{x}_2(t) = x_2(t)[r_2 - a_2 x_2 (t) - a_{21} x_1 (t - \tau_{21} ) + a_{22} x_2 (t - \tau_{22} )
-\end{matrix}\right.
-\]
-
-(1)
-
-with initial conditions
-
-\[
-x_i(t) = \phi_i(t) \geq 0, t \in [-\tau_0 , 0]; \phi_i(0) > 0, (i = 1, 2)
-\]
-
-
-where $r_i, a_i, a_{ij}$ and $\tau_{ij}$ are constants with $a_i > 0$, $a_{ij} \geq 0$ (i, j = 1, 2) and  0 = max {  ij : i, j = 1, 2 
-} , $\phi_{ij}$ is continuous on [-$\tau$ 0 , 0]. They show that delays can change the permanence for Lotka–Volterra cooperative 
-systems. For certain delays with the same length, the delayed system has a similar property to the corresponding 
-system without delays in the sense of permanence, but for a general delay case, the delays may destroy the permanence 
-for the system. In 2010, Nakata and Muroya considered the following nonautonomous Lotka–Volterra cooperative systems 
-with time delays (see, [3])
-
-donde $r_i, a_i, a_{ij}$ y $\tau_{ij}$ son constantes con $a_i > 0, a_{ij} \geq 0$ (i, j = 1, 2) y $\tau_0$ = máx{$\tau_{ij}$: i, j = 1, 2} , $\phi_{ij}$ es 
-continuo en $[-\tau 0 , 0]$. Demuestran que los retrasos pueden cambiar la permanencia de los sistemas cooperativos 
-Lotka-Volterra. Para ciertos retrasos con la misma duración, el sistema retrasado tiene una propiedad similar a la del 
-sistema correspondiente sin retrasos en cuanto a la permanencia, pero para un caso general de retraso, los retrasos 
-pueden destruir la permanencia del sistema. En 2010, Nakata y Muroya consideraron los siguientes sistemas cooperativos 
-Lotka-Volterra no autónomos con retrasos temporales (véase [3]).
-
-\[
-\left\{\begin{matrix}
-\dot{x}(t) = x_1(t)[r_1(t) - a_{11}^1(t)x_1(t) - \tau) - a_{11}^2(t)x_1 (t - 2 \tau) + a_{12}^1(t)x_2 (t - 
-\tau)], \\
-\dot{x}(t) = x_2(t)[r_2(t) + a_{21}^0(t)x_1(t) + a_21^1(t)x_1 (t - \tau) - a_{22}^0(t)x_2(t) - a_{22}^1(t) x_2 (t - \tau)
-\end{matrix}\right.
-\]
-
-
-where $x_i(t)$ (i = 1, 2) denote the density of i-species at time t, $\tau$ is a positive constant and $r_i(t), a_{ij}^l(t) (1 \leq i, j \leq 2; 0 \leq l \leq 2)$ are continuous, bounded and strictly positive functions as $t \in [- \tau, + \infty)$. They 
-obtained some sufficient conditions for the permanence of the system (2). Xu and Zu [4] investigated the following 
-two-species delayed competitive model with stage structure and harvesting
-
-Donde $x_i(t)$ (i = 1, 2) denota la densidad de i-especies en el tiempo t, $\tau$ es una constante positiva y $r_i(t), a_{ij}^l(t) 
-(1 \leq i, j \leq 2; 0 \leq l \leq 2)$ son funciones continuas, acotadas y estrictamente positivas cuando $t \in [- \tau, + \infty]$. 
-Obtuvieron algunas condiciones suficientes para la permanencia del sistema (2). Xu y Zu [4] investigaron el siguiente 
-modelo competitivo retardado de dos especies con estructura de etapas y cosecha.
-
-
-\[
-\left\{\begin{matrix}
-\frac{dx_1}{dt} = \alpha(t)x_2(t) - \gamma x_1 (t) - \alpha (t - \tau)e^{\gamma \tau} x_2 (t - \tau), \\
-\frac{dx_2(t)}{dt}= \alpha(t - \tau)e^{-\gamma \tau} x_2 (t - \tau) - \beta(t)x_2^2(t) - a_1(t)x_2 
-(t)\gamma(t) - E(t)x_2 (t), \\
-\frac{dy(t)}{dt}= y(t)(r_1(t) - a_2(t)x_2(t) - b(t)y(t)).
-\end{matrix}
-\right.
-\]
-
-
-By using the differential inequality theory, some new sufficient conditions which ensure the permanence of the system 
-are established. In [5], the authors considered the following competitor-competitor–mutualist Lotka–Volterra systems 
-with discrete time delays
-
-Mediante la teoría de la desigualdad diferencial, se establecen nuevas condiciones suficientes que garantizan la 
-permanencia del sistema. En [5], los autores consideraron los siguientes sistemas Lotka-Volterra 
-competidor-competitivo-mutualista con retardos discretos.
-
-\[
-\left\{\begin{matrix}
-\dot{x}_1(t) = x_1(t)[r_1 (t) - a_{11}^1(t)x_1 (t - \tau) - a_{11}^2(t)x_1 (t - 2 \tau) - a_{12}(t)x_2 (t - 
-2\tau) + a_{13}(t)x_3 (t - \tau)], \\\dot{x}_2(t) = x_2(t) [r_2(t) - a_{21}(t)x_1(t - 2 \tau) - a_{22}^1(t)x_2(t - \tau) - a_{22}^2(t)x_2(t - 
-2 \tau) + a_{23}(t)x_3 (t - \tau)], \\
-\dot{x} = x_3(t)[r_3 (t) + a_{31}(t)x_1 (t - \tau) + a_{32} (t)x 2 (t - \tau) - a_{33}^1(t) x_3 (t) - a_{33}^2(t) x_3 (t - \tau)]. \\
-\end{matrix}\right.
-\]
-
-
-(4)
-
-And some sufficient conditions which guarantee the boundedness, permanence and global attraction for system (4) were 
-obtained. In 2011, Xu et al. [6] studied the dynamical behaviours for the following Lokta–Volterra predator–prey model 
-with two delays
-
-Se obtuvieron condiciones suficientes que garantizan la acotación, la permanencia y la atracción global del sistema 
-(4). En 2011, Xu et al. [6] estudiaron los comportamientos dinámicos del siguiente modelo depredador-presa de 
-Lokta-Volterra con dos retrasos.
-
-\[
-\left\{\begin{matrix}
-\dot{x}_1(t) = x_1(t)[r_1 - a_{11} x_1 (t - \tau_1 ) - a_{12} y(t - \tau_2 )], 
-\dot{x}_2(t) = x_2(t)[-r_2 - a_{21} x_1 (t - \tau_1 ) - a_{22} y(t - \tau_2 )].
-\end{matrix}\right.
-\]
-
-(5)
-
-Its linear stability and Hopf bifurcation are investigated by analysing the associated characteristic transcendental 
-equation. Some explicit formulate for determining the stability and the direction of the Hopf bifurcation periodic 
-solutions are obtained by using normal form theory and centre manifold theory.
-
-Se investiga su estabilidad lineal y la bifurcación de Hopf mediante el análisis de la ecuación trascendental 
-característica asociada. Se obtienen fórmulas explícitas para determinar la estabilidad y la dirección de las 
-soluciones periódicas de la bifurcación de Hopf mediante la teoría de la forma normal y la teoría de la variedad 
-central.
-
-One can find that an ecosystem in the real world is continuously distributed by some forces, which can result in 
-changes in the biological parameters such as survival rates. The practical interest in ecology is the question of 
-whether or not an ecosystem can withstand those disturbances which persist for a finite period of time. In the control 
-systems, we regard the disturbance functions as control variables. These are of significance in the control of ecology 
-balance. One of the methods to research it is to alter the system structurally by introducing feedback control 
-variables. The feedback control mechanism might be implemented by means of some biological control schemes or 
-harvesting procedure. In fact, during the last decade, the qualitative behaviour of the population dynamics with 
-feedback control has been studied extensively. In 2009, Nie et al. [12] considered the following non-autonomous 
-predator–prey Lotka–Volterra system with feedback controls
-
-En la vida real, un ecosistema se distribuye continuamente por ciertas fuerzas, lo que puede provocar cambios en 
-parámetros biológicos como las tasas de supervivencia. El interés práctico en ecología radica en determinar si un 
-ecosistema puede soportar perturbaciones que persisten durante un período finito. En los sistemas de control, 
-consideramos las funciones de perturbación como variables de control. Estas son importantes para controlar el 
-equilibrio ecológico. Uno de los métodos para investigarlo es alterar la estructura del sistema mediante la 
-introducción de variables de control de retroalimentación. El mecanismo de control de retroalimentación podría 
-implementarse mediante esquemas de control biológico o procedimientos de cosecha. De hecho, durante la última década, 
-se ha estudiado ampliamente el comportamiento cualitativo de la dinámica poblacional con control de retroalimentación. 
-En 2009, Nie et al. [12] consideraron el siguiente sistema Lotka-Volterra depredador-presa no autónomo con controles 
-de retroalimentación.
-
-
-x ˙ 1 (t) = x 1 (t)[b 1 (t) − a 11 (t)x 1 (t) − a 12 (t)x 2 (t) + c 1 (t)u 1 (t)], ⎪ ⎪ ⎧ ⎪ x ˙ 2 (t) = x 2 
-(t)[−b 2 (t) + a 21 (t)x 1 (t) − a 22 (t)x 2 (t) − c 2 (t)u 2 (t)], ⎪ ⎪ ⎨ u ˙ 1 (t) = f 1 (t) − e 1 (t)u 1 (t) 
+\dot{x}_1(t) = x_1(t)[b_1(t) - a_{11}(t) x_1(t) - a_{12}(t) x_2(t) + c_1(t) u_1(t)],
+\dot{x}_2(t) = x_2(t)[-b_2(t) + a 21 (t)x 1 (t) − a 22 (t)x 2 (t) − c 2 (t)u 2 (t)], ⎪ ⎪ ⎨ u ˙ 1 (t) = f 1 (t) − e 1 (t)u 1 (t) 
 − d 1 (t)x 1 (t), ⎪ ⎩ u ˙ 2 (t) = −e 2 (t)u 2 (t) + d 2 (t)x 2 (t),
+\end{matrix}\right.
+\]
+
+\end{comment}
 
 (6)
 
@@ -189,11 +29,13 @@ an appropriate Lyapunov function, some sufficient conditions are obtained for th
 solution to system (6). In [13], Yang, Wang and Chen proposed and studied the following cooperation system with 
 feedback controls
 
-donde x1(t) es la densidad de población de la presa y x2(t) es la densidad de población del depredador, b1(t) y a11(t) 
-son la tasa de crecimiento intrínseca y el coeficiente dependiente de la densidad de la presa, respectivamente; b2(t) 
-y a 22 (t) son la tasa de crecimiento intrínseca y el coeficiente dependiente de la densidad del depredador, 
-respectivamente; a12(t) es la tasa de captura del depredador y a21(t) es la tasa de conversión de nutrientes en la 
-reproducción del depredador; ui(t)(i =1, 2) son variables de control. Estudiaron si los controles de retroalimentación 
+\hrule
+
+donde $x_1(t)$ es la densidad de población de la presa y $x_2(t)$ es la densidad de población del depredador, $b_1(t)$ y $a_{11}(t)$ 
+son la tasa de crecimiento intrínseca y el coeficiente dependiente de la densidad de la presa, respectivamente; $b_2(t)$ 
+y $a_{22}(t)$ son la tasa de crecimiento intrínseca y el coeficiente dependiente de la densidad del depredador, 
+respectivamente; $a_{12}(t)$ es la tasa de captura del depredador y a21(t) es la tasa de conversión de nutrientes en la 
+reproducción del depredador; $u_i(t)$ (i =1, 2) son variables de control. Estudiaron si los controles de retroalimentación 
 tienen o no influencia en la permanencia de una solución positiva de los sistemas generales no autónomos 
 depredador-presa tipo Lotka-Volterra y establecen los criterios generales sobre la permanencia del sistema (6), que es 
 independiente de algunos controles de retroalimentación. Además, al construir una función de Lyapunov apropiada, se 
@@ -201,30 +43,36 @@ obtienen algunas condiciones suficientes para la estabilidad global de cualquier
 [13], Yang, Wang y Chen propusieron y estudiaron el siguiente sistema de cooperación con controles de 
 retroalimentación
 
+\begin{comment}
 x ˙ 1 (t) = x 1 (b 1 − a 11 x 1 (t) + a 12 x 2 (t) − α 1 u 1 (t)), ⎧ ⎪ ⎪ ⎪ x ˙ 2 (t) = x 2 (b 2 + a 21 x 1 (t) 
 − a 22 x 2 (t) − α 2 u 2 (t)), ⎪ ⎪ ⎨ u ˙ 1 (t) = −η 1 u 1 (t) + a 1 x 1 (t), ⎪ ⎩ u ˙ 2 (t) = −η 2 u 2 (t) + a 
 2 x 2 (t),
+\end{comment}
 
 (7)
 
-where bi , aij , αi , ηi , ai , i, j = 1, 2 are positive constants. xi(t), (i = 1, 2) are the densities of the 
+where $b_i, a_{ij}, \alpha_i, \eta_i, a_i$, i, j = 1, 2 are positive constants. xi(t), (i = 1, 2) are the densities of the 
 species at time t, ui(t), (i = 1, 2) denote feedback controls. They showed that if system (7) has a positive 
 equilibrium, then feedback controls can only influence the position of the positive equilibrium, and have no influence 
 on the stability. In 2018, Wang et al. [14] considered the following three-species Lokta–Volterra predator–prey system 
 with feedback
 
-Donde bi, aij, αi, ηi, ai, i, j = 1, 2 son constantes positivas. xi(t), (i = 1, 2) son las densidades de las especies 
-en el tiempo t, ui(t), (i = 1, 2) representan controles de retroalimentación. Demostraron que si el sistema (7) tiene 
+\hrule
+
+Donde $b_i, a_{ij}, \alpha_i, \eta_i, a_i$, i, j = 1, 2 son constantes positivas. $x_i(t)$, (i = 1, 2) son las densidades de las especies 
+en el tiempo t, $u_i(t)$, (i = 1, 2) representan controles de retroalimentación. Demostraron que si el sistema (7) tiene 
 un equilibrio positivo, entonces los controles de retroalimentación solo pueden influir en la posición del equilibrio 
 positivo y no en la estabilidad. En 2018, Wang et al. [14] consideraron el siguiente sistema depredador-presa de tres 
 especies de Lokta-Volterra con retroalimentación.
 
+ \begin{comment}
 a 12 (t)x 2 (t) ⎪ ⎪ ⎧ ⎪ ⎪ x ˙ 1 (t) = x 1 (t)[r 1 (t) − a 11 (t)x 1 (t) ⎪ ⎪ b 12 (t)x 2 (t) + x 1 (t) ⎪ ⎪ ⎪ 
 ⎪ a 13 (t)x 3 (t) ⎪ ⎪ − (t)u 1 (t)], ⎪ ⎪ b 13 (t)x 3 (t) + x 1 (t) − d1  ⎪ ⎪ ⎪ ⎪ a 21 (t)x 1 (t) ⎪ ⎪ x ˙ 
 2 (t) = x 2 (t)[−r 2 (t) + (t)x 3 (t) + d 2 (t)u 2 (t)], a23  b 12 (t)x 2 (t) + x 1 (t) ⎪ ⎪ ⎨ a 31 (t)x 1 (t) ⎪ 
 ⎪ x ˙ 3 (t) = x 3 (t)[−r 3 (t) + (t)x 2 (t) + d 3 (t)u 3 (t)], ⎪ ⎪ b 13 (t)x 3 (t) x 1 (t) − a32  + ⎪ ⎪ ⎪ ⎪ 
 ⎪ ⎪ u ˙ 1 (t) = e 1 (t) − f 1 (t)u 1 (t) + q 1 (t)x 1 (t), ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ u ˙ 2 (t) = e 2 (t) − f 2 (t)u 2 (t) 
 − q 2 (t)x 2 (t), ⎪ ⎪ ⎩ u ˙ 3 (t) = e 3 (t) − f 3 (t)u 3 (t) − q 3 (t)x 3 (t),
+\end{comment}
 
 (8)
 
@@ -238,6 +86,8 @@ delay and feedback control can respond better to impersonal law. In recent years
 paid to some ecosystem models with both feedback control and time delay (see, [22–27]). In 1993, Gopalsamy et al. [22] 
 studied a class of autonomous single-species ecosystem with feedback control and time delay
 
+\hrule
+
 Mediante el uso de un teorema de comparación y la construcción de una función de Lyapunov adecuada, así como el 
 desarrollo de nuevas técnicas de análisis, los autores establecieron un conjunto de condiciones suficientes fácilmente 
 verificables que garantizan la permanencia del sistema y la atracción global de una solución positiva para el sistema 
@@ -250,22 +100,26 @@ a algunos modelos de ecosistemas con control de retroalimentación y retardo tem
 Gopalsamy et al. [22] estudiaron una clase de ecosistema autónomo monoespecífico con control de retroalimentación y 
 retardo temporal.
 
+\begin{comment}
 a1  ⎪ ⎪ ⎧ dn(t) n(t) + a 2 n(t − τ) = rn(t)[1 − ( ) − cu(t)], dt K ⎪ ⎪ ⎨ du(t) = −au(t) + bn(n − τ), ⎩ dt
+\end{comment}
 
 (9)
 
-where u(t) denotes an indirect control variable, τ, a2 , a, b, c, r ∈ (0, ∞) and a 1 ∈ [0, ∞). Some sufficient 
+where u(t) denotes an indirect control variable, $\tau, a_2 , a, b, c, r \in (0, \infty)$ and $a_1 \in [0, \infty)$. Some sufficient 
 conditions were obtained for the global asymptotic stability of the positive equilibrium for the system (9). In order 
 to show that whether the feedback control variables play an essential role on the persistent property of 
 Lotka–Volterra cooperative systems or not, Xu and Chen [26] established and studied the following system with time 
 delay and feedback control
 
 
+\begin{comment}
 
 ⎪ ⎪ ⎧ x˙ 1 (t) = x 1 (t)[r 1 (t) − a 1 (t)x 1 (t) − a 11 (t)x 1 (t − τ) + a 12 (t)x 2 (t − τ) − b 1 (t)u 1 (t 
 − σ 1 )], x˙ 2 (t) = x 2 (t)[r 2 (t) − a 2 (t)x 2 (t) + a 21 (t)x 1 (t) − a 22 (t)x 2 (t − τ) − b 2 (t)u 2 (t − 
 σ 2 )], ⎪ ⎪ ⎨u˙ 1 (t) = −c 1 (t)u 1 (t) + d 1 (t)x 1 (t − η 1 ), ⎩ u˙ 2 (t) = −c 2 (t)u 2 (t) + d 2 (t)x 2 (t 
 − η 2 ).
+\end{comment}
 
 (10)
 
@@ -275,10 +129,12 @@ control variables had no influence on the permanence of the
 system. In 2017, Xu and Li [27] considered the following competition and cooperation model of two enterprises with 
 multiple delays and feedback controls
 
+\begin{comment}
 dx 1 (t) ⎪ ⎪ ⎧ ⎪ ⎪ dt = x 1 (t)[r 1 (t) − a 1 (t)x 1 (t) − b 1 (t)(x 2 (t) − c 2 (t)) 2 − e 1 (t)u 1 (t − τ 
 1 (t))], ⎪ ⎪ ⎪ ⎪ du 1 (t) ⎪ ⎪ = −α 1 (t)u 1 (t) + β 1 (t)x 1 (t − σ 1 (t)), dt ⎪ ⎪ ⎨ dx 2 (t) ⎪ ⎪ = x 2 
 (t)[r 2 (t) − a 2 (t)x 2 (t) + b 2 (t)(x 1 (t) − c 1 (t)) 2 − e 2 (t)u 2 (t − τ 2 (t))], ⎪ ⎪ dt ⎪ ⎪ ⎪ ⎪ du 2 
 (t) = −α 2 (t)u 2 (t) + β 2 (t)x 2 (t − σ 2 (t)). ⎩ dt
+\end{comment}
 
 (11) Some sufficient conditions that guarantee the existence of a unique globally asymptotically stable nonnegative 
 almost periodic solution for the system (11) were obtained by constructing a suitable Lyapunov functional and using 
@@ -288,36 +144,42 @@ However, as far as we know, no work has been done until now for the three-specie
 control and time delay. Motivated by the above work, we propose and investigate the following three species 
 Lotka–Volterra competitive–cooperative model with feedback controls and time delays
 
+\begin{comment}
 x ˙ 1 (t) = x 1 (t)[r 1 (t) − a 11 1 (t)x 1 (t − τ) − a 11 2 (t)x 1 (t − 2τ) − a 12 (t)x 2 (t − 2τ) ⎧ ⎪ ⎪ ⎪ 
 ⎪ a 13 (t)x 3 (t − τ) − d 1 (t)u 1 (t)], + ⎪ ⎪ ⎪ ⎪ x ˙ 2 (t) = x 2 (t)[r 2 (t) − a 21 (t)x 1 (t − 2τ) − a 22 
 1 (t)x 2 (t − τ) − a 22 2 (t)x 2 (t − 2τ) ⎪ ⎪ ⎪ ⎪ + a 23 (t)x 3 (t − τ) + d 2 (t)u 2 (t)], x ˙ 3 (t) = x 3 
 (t)[r 3 (t) + a 31 (t)x 1 (t − τ) + a 32 (t)x 2 (t − τ) − a 33 1 (t)x 3 (t) ⎪ ⎪ ⎨ ⎪ ⎪ − a 33 2 (t)x 3 (t − 
 τ) + d 3 (t)u 3 (t)], ⎪ ⎪ ⎪ ⎪ u ˙ 1 (t) = e 1 (t) − f 1 (t)u 1 (t) + q 1 (t)x 1 (t), ⎪ ⎪ ⎪ ⎪ u ˙ 2 (t) = e 2 
 (t) − f 2 (t)u 2 (t) − q 2 (t)x 2 (t), ⎩ u ˙ 3 (t) = e 3 (t) − f 3 (t)u 3 (t) − q 3 (t)x 3 (t),
+\end{comment}
 
 (12)
 
-where x i (t), i = 1, 2, 3 stands for the densities of the species at time t, and u i (t), i = 1, 2, 3 are the 
-indirect control variables. The given coefficients a 12 (t), a 13 (t), a 21 (t), a 23 (t), a 31 (t), a 32 (t), r i 
-(t), d i (t),e i (t), f i (t), q i (t)(i = 1, 2, 3), a 11 l (t), a 22 l (t), a 33 l (t), (l = 1, 2) are continuous, 
-bounded and strictly positive functions on [0, ∞). r i (t), (i = 1, 2, 3) denote the intrinsic growth rate of the 
-i-th species at time t. Especially, a ii l (t), (i = 1, 2, 3, l = 1, 2) denote the internal competitive coefficient of 
-the three species at time t. a 12 (t), a 21 (t) are the competitive coefficient of species x 1 (t) and x 2 (t) at time 
-t, respectively. a 13 (t), a 23 (t), a 31 (t), a 32 (t) are the cooperative coefficient of species x i (t), (i = 1, 2, 
-3) at time t, respectively. τ is a positive constant.
+where $x_i(t)$, i = 1, 2, 3 stands for the densities of the species at time t, and $u_i(t)$, i = 1, 2, 3 are the 
+indirect control variables. The given coefficients $a_{12}(t), a_{13}(t), a_{21}(t), a_{23}(t), a_{31}(t), a_{32}(t), r_i 
+(t), d_i(t), e_i(t), f_i(t), q_i(t)$ (i = 1, 2, 3), $a_{11}^l(t), a_{22}^l(t), a_{33}^l (t)$, (l = 1, 2) are continuous, 
+bounded and strictly positive functions on $[0, \infty). r_i(t)$, (i = 1, 2, 3) denote the intrinsic growth rate of the 
+i-th species at time t. Especially, $a_{ii}^l(t)$, (i = 1, 2, 3, l = 1, 2) denote the internal competitive coefficient of 
+the three species at time t. $a_{12}(t), a_{21}(t)$ are the competitive coefficient of species $x_1(t)$ and $x_2(t)$ at time 
+t, respectively. $a_{13}(t), a_23(t), a_{31}(t), a_{32}(t)$ are the cooperative coefficient of species $x_i(t)$, (i = 1, 2, 
+3) at time t, respectively. $\tau$ is a positive constant.
 
 Due to the biological interpretation of the system (8), it is reasonable to consider only positive solution of the 
 system (8), in other words, take admissible initial conditions
 
+\begin{comment}
 x i (t) = φ i (t), i = 1, 2, 3 for t ∈ [−2τ, 0) and φ 1 (0) >0,
+\end{comment}
 
 (13)
 
+\begin{comment}
 u i (t) = ϕ i (t), i = 1, 2, 3 for t > 0 and ϕ 1 (0) >0.
+\end{comment}
 
-Obviously, the solutions of system (12) with the initial values (13) are positive for all t ≥ 0.
+Obviously, the solutions of system (12) with the initial values (13) are positive for all $t \geq  0$.
 
-Comparing the systems (4) and (12), one could see that we introduce the control variables u i (t) (i = 1, 2, 3) so as 
+Comparing the systems (4) and (12), one could see that we introduce the control variables $u_i(t)$ (i = 1, 2, 3) so as 
 to implement a feedback control mechanism. Our main purpose in this paper is to establish some sufficient conditions 
 which ensure the system to be permanence and global attractivity by constructing a new appropriate Lyapunov function 
 and developing a new analysis technique. This paper is organized as follows: In Section 2, we provide the conditions 
@@ -328,54 +190,69 @@ Competitive-Competitive–Cooperative model (12). Some numerical simulations to 
 2. Permanence
 
 In order to establish a permanence result for the system (12), we need some preparations. Firstly, we introduce the 
-following notations and definitions. Given a function g(t) defined on [t 0 + ∞), we set
+following notations and definitions. Given a function g(t) defined on $[t_0 + \infty)$, we set
 
-g m = sup { g(t) | t 0 < t < + ∞ } , g l = inf { g(t) | t 0 < t < + ∞ } .
+\[
+g^m = sup { g(t) | t_0 < t < + \infty } , g^l = inf { g(t) | t_0 < t < + \infty } .
+\]
 
-Definition 2.1: System (12) is called permanent, if there exist positive constants M i , N i , m i , n i (i = 1, 2, 
-3), and T, such that m i ≤ x i (t) ≤ M i , n i ≤ u i (t) ≤ N i for any positive solution Z(t) = (x 1 (t), x 2 (t), 
-x 3 (t), u 1 (t), u 2 (t), u 3 (t)) of (8) as t > T.
+Definition 2.1: System (12) is called permanent, if there exist positive constants $M_i , N_i , m_i , n_i$ (i = 1, 2, 
+3), and T, such that $m_i \leq x_i(t) \leq M_i , n_i \leq u_i(t) \leq N_i$ for any positive solution $Z(t) = (x_1 (t), x_2(t), 
+x_3(t), u_1(t), u_2(t), u_3(t))$ of (8) as t > T.
 
 As a direct corollary of Lemma 2.1 of Chen [1], we have.
 
-Lemma 2.1: If a > 0, b > 0 and x ˙ ≥ b − ax, when t ≥ 0 and x(0) > 0, we have
+Lemma 2.1: If a > 0, b > 0 and $\dot{x} \geq b - ax$, when $t \geq 0$ and x(0) > 0, we have
 
-lim inf x(t) ≥ b/a. t→ + ∞
+\[
+\lim_{t \to + \infty} inf x(t) \geq b/a.
+\]
 
-If a > 0, b > 0 and x ˙ ≤ b − ax, when t ≥ 0 and x(0) > 0, we have
+If a > 0, b > 0 and $\dot{x} \geq  b - ax$, when $t \geq 0$ and x(0) > 0, we have
 
-lim sup x(t) ≤ b/a.
+\[
+\lim_{t \to + \infty} sup x(t) \geq b/a.
+\]
 
-t→ + ∞
 
 Lemma 2.2 (see [3], Lemma 2.2): Assume that for y(t) > 0, it holds that
 
-m y ˙ (t) ≤ y(t)(λ − ∑ μ l y(t − lτ)) + D, l=0
+\[
+\dot{y}(t) \leq y(t)( \lambda - \sum_{i=0}^m \mu^l y(t - l \tau)) + D, 
+\]
 
-with initial conditions y(t) = φ(t) ≥ 0 for t ∈ [−mτ, 0) and φ(0) > 0, where
+with initial conditions $y(t) = \phi(t) \geq 0$ for $t \in [- m \tau, 0)$ and $\phi(0) > 0$, where
 
-m λ > 0, μ l ≥ 0(l = 0, 1, 2, · · · , m), μ = ∑ μ l > 0 and D ≥ 0, l=0
+\[
+\lambda > 0, \mu^l \geq 0 \text{(l = 0, 1, 2, · · · , m)}, \mu = \sum_{l=0}^m \mu^l > 0 \text{ and } D \geq 0, 
+\]
 
-are constants. Then there exist a positive constant M y < + ∞ such that
+are constants. Then there exist a positive constant $M_y < + \infty$ such that
 
-D D lim sup y(t) ≤ M y = − ∗ ) exp(λmτ) < + ∞, ( y + + t→ + ∞ λ λ
+\[
+\lim_{t \to + \infty} \sup y(t) \geq M_y = - \frac{D}{\lambda} + (\frac{D}{\lambda} + y^*) exp( \lambda m \tau) < + \infty,
+\]
 
 (14)
 
-where y = y ∗ is the unique solution of equation y(λ − μy) + D = 0.
+where $y = y^*$ is the unique solution of equation $y( \lambda - \mu y) + D = 0$.
 
 Lemma 2.3 (see [3], Lemma 2.3): Assume that for y(t) > 0, it holds that
 
-m y ˙ (t) ≥ y(t)[λ − ∑ μ l y(t − lτ)]. l=0
+\[
+\dot{y}(t) \geq y(t)[ \lambda - \sum_{i=0}^m \mu^l y(t - l \tau)]. 
+\]
 
-If the system (14) holds, then, there exists a positive constant m y > 0 such that for μ =
+If the system (14) holds, then, there exists a positive constant $m_y > 0$ such that for $\mu = \sum_{i=0}^m \mu^l > 0$
 
-m ∑ μ l >0 l=0
 
-λ lim inf y(t) ≥ m y = )mτ } > 0. exp (λ μMy  { t→ + ∞ μ
+\[
+\lim_{t \to + \infty} inf y(t) \geq m_y = \frac{\lambda}{\mu}  \exp ( \lambda - \mu M-y) m \tau) > 0
+\]
 
 For the system (12), let
 
+\begin{comment}
 m m e e N 2 = 2 ,N 3 = 3 , l l f 2 f 3
 
 (r1 m  + r 3 m + d3 m N3 )2  P 1 = exp { (r 1 m + r 3 m + d 3 m N 3 )τ } , a11 1l a33 2l 
@@ -402,53 +279,59 @@ where x 1 ∗ is the unique positive solution of equation x 1 [r 1 m − (a 11 1
 ∗ is the unique positive solution of equation x 2 [r 2 m + d 2 m N 2 − (a 22 1l + a 22 2l )x 2 ] + a 23 m P 2 = 0, 
 and x 3 ∗ is the unique positive solution of equation x 3 (t)[r 3 m + (a 31 m + a 32 m + d 3 m ) max { M 1 , M 2 , N 
 3 } − (a 33 1l + a 33 2l )x 3 ] = 0.
+\end{comment}
 
 Theorem 2.1: Assume the following conditions satisfy
 
+\begin{comment}
 (H 1 ) a 11 2l > a 31 m , (H 2 ) a 12 l > a 32 m , (H 3 ) a 33 1l > a 13 m , (H 4 ) a 21 l > a31 m 
 
 (H 5 ) a 22 2l > a 32 m , (H 6 ) a 33 1l > a 23 m , (H 7 ) r 1 l > a 12 m M 2 + d 1 m N 1 ,
 
 (H 8 ) r 2 l > a 21 m M 1 , (H 9 ) e 2 l > q 2 m M 2 , (H 10 ) e 3 l > q 3 m M 3 .
+\end{comment}
 
 Then the system (12) is permanent.
 
 Proof. By the fifth equation of system (8), we have
 
+\begin{comment}
 u ˙ 2 (t) ≤ e 2 (t) − f 2 (t)u 2 (t) ≤ e 2 m − f 2 l u 2 (t).
 
 e2 m  lim sup u 2 (t) ≤ = N 2 . t→ + ∞ f2 l 
+\end{comment}
 
 (15)
 
 Moreover, similar to the above discussion of the fifth equation of system (12), from the sixth of system (12), we have
 
-e3 m  lim sup u 3 (t) ≤ = N 3 . t→ + ∞ f3 l 
+\[
+\lim_{t \to + \infty} \sup u_3(t) \leq \frac{e_3^m}{f_3^l} = N_3
+\]
 
 (16)
 
-Next, suppose that lim sup x 1 (t)x 3 (t − τ) = + ∞, then there exists a time sequence
+Next, suppose that $\lim_{t \to + \infty} x_1(t) x_3 (t - \tau) = + \infty$, then there exists a time sequence
+${t_k}_{k=1}^{\infty}$ such that
 
-t→ + ∞
-
-{ t k }k=1 ∞ 
-
-and
-
-such that
-
-lim sup x 1 (t k )x 3 (t k − τ) = + ∞,
+\[
+\lim_{k \to + \infty} \sup x_1 (t_k ) x_3 (t_k - \tau) = + \infty,
+\]
 
 (17)
 
-k→ + ∞
+and
 
-d (x1  (t)x 3 (t − τ)) | t=t k ≥ 0, k = 1, 2, · · · . dt
+\[
+\frac{d}{dt} (x_1(t) x_3 (t - \tau )) |_{t=t_k} \geq  0, k = 1, 2, · · · . 
+\]
+
 
 (18)
 
 From system (12), one has
 
+\begin{comment}
 d (x1  (t)x 3 (t − τ)) = x 1 (t)x 3 (t − τ)[r 1 (t) + r 3 (t − τ) − a 11 1 (t)x 1 (t − τ) dt
 
 − a 11 2 (t)x 1 (t − 2τ) − a 12 (t)x 2 (t − 2τ) + a 13 (t)x 3 (t − τ)
@@ -463,83 +346,120 @@ d (x1  (t)x 3 (t − τ)) = x 1 (t)x 3 (t − τ)[r 1 (t) + r 3 (t − τ) − a
 
 (19)
 
+
 − a 11 1l x 1 (t − τ) − a 33 2l x 3 (t − 2τ) − d 1 l u 1 (t)].
+
+\end{comment}
 
 From (18), (19), we can obtain
 
+\begin{comment}
 (a 11 2l − a 31 m )x 1 (t k − 2τ) + (a 12 l − a 32 m )x 2 (t k − 2τ) + (a 33 1l − a 13 m )x 3 (t k − τ) + d 1 l 
 u 1 (t k ) + a 11 1l x 1 (t k − τ) + a 33 2l x 3 (t k − 2τ) ≤ r 1 m + r 3 m + d 3 m N 3 .
+\end{comment}
 
 (20)
 
 Thus, by the assumption of the Theorem 2.1 and (20), it holds that
 
+\begin{comment}
 r1 m  + r 3 m + d3 m N 3 + r 3 m + d3 m N3  r1 m  x 1 (t k − τ) ≤ , x 3 (t k − 2τ) ≤ . a 11 1l a33 2l 
+\end{comment}
 
 Moreover, by (19) and the assumption of the Theorem 2.1, it follows that
 
+\begin{comment}
 d (x1  (t)x 3 (t − τ)) ≤ x 1 (t)x 3 (t − τ)[r 1 m + r 3 m + d 3 m N 3 ]. dt
+\end{comment}
 
 (21)
 
-By integrating both sides of (21) from t k − τ to t k further, we have
+By integrating both sides of (21) from $t_k - \tau$ to $t_k$ further, we have
 
+\begin{comment}
 x 1 (t k )x 3 (t k − τ) ≤ x 1 (t k − τ)x 3 (t k − 2τ) exp { (r 1 m + r 3 m + d 3 m N 3 )τ } .
+\end{comment}
 
 Therefore
 
+\begin{comment}
 (r1 m  + r 3 m + d3 m N3 )2  x 1 (t k )x 3 (t k − τ) ≤ exp { (r 1 m + r 3 m + d 3 m N 3 )τ } . a11 1l a33 2l 
+\end{comment}
 
 However, it leads to a contradiction with (17). Thus, we have
 
+\begin{comment}
 (r1 m  + r 3 m + d3 m N3 )2  lim sup(x 1 (t)x 3 (t − τ)) ≤ P 1 = exp { (r 1 m + r 3 m + d 3 m N 3 )τ } . (22) t→ + 
 ∞ a 11 1l a33 2l 
+\end{comment}
+
 
 Moreover, similar to the above discussion, we can also obtain that
+
+\begin{comment}
 
 lim sup(x 2 (t)x 3 (t − τ)) ≤ P2 
 
 t→ + ∞
 
 (r2 m  + r 3 m + d2 m N 2 + d3 m N3 )2  = exp { (r 2 m + r 3 m + d 2 m N 2 + d 3 m N 3 )τ } . a22 1l a33 2l 
+\end{comment}
+
 
 (23)
 
 According to the first equation of system (21) and (22), it follows that
 
+\begin{comment}
+
 x ˙ 1 (t) ≤ x 1 (t)[r 1 − a 11 1 x 1 (t − τ) − a 11 2 x 1 (t − 2τ) + a 13 x 3 (t − τ)]
 
 ≤ x 1 (t)[r 1 m − a 11 1l x 1 (t − τ) − a 11 2l x 1 (t − 2τ)] + a 13 m P 1 .
+\end{comment}
+
 
 From Lemma 2.2, we have
 
+\begin{comment}
+
 a13 m  P 1 P1  a13 m  lim sup x 1 (t) ≤ − + ( + x 1 ∗ ) exp(2r 1 m τ) = M 1 , t→ + ∞ r 1 m r1 m 
+\end{comment}
+
 
 (24)
 
-where x 1 ∗ is the unique positive solution of equation x 1 [r 1 m − (a11 1l 
-
-+
-
-a 11 2l )x 1 ] + a 13 m P 1 = 0.
+where $x_1^*$  is the unique positive solution of equation $x_1 [r_1^m - (a_{11}^{1l} + a_{11}^{2l} )x_1] + a_{13}^m P_1 = 0$.
 
 Similar to the above discussion of the first equation of system (12), from (23) and the second equation of system 
 (12), we obtain
 
+\begin{comment}
+
 x ˙ 2 (t) ≤ x 2 (t)[r 2 − a 22 1 x 2 (t − τ) − a 22 2 x 2 (t − 2τ) + a 23 x 3 (t − τ) + d 2 u 2 (t)]
 
 ≤ x 2 (t)[r 2 m − a 22 1l x 2 (t − τ) − a 22 2l x 2 (t − 2τ) + d 2 m N 2 ] + a 23 m P 2 .
+\end{comment}
+
 
 So, we have
 
+\begin{comment}
 a P a P lim sup x 2 (t) ≤ − + ( + x 2 ∗ ) exp((r 2 m + d 2 m N 2 )2τ) = M 2 . (25) t→ + ∞ r 2 m + m 23 dm 2 2 N 2 
 r 2 m + m 23 dm 2 2 N2 
+\end{comment}
 
-where x 2 ∗ is the unique positive solution of the following equation
+
+where $x_2^*$  is the unique positive solution of the following equation
+
+\begin{comment}
 
 x 2 [r 2 m + d 2 m N 2 − (a 22 1l + a 22 2l )x 2 ] + a 23 m P 2 = 0.
+\end{comment}
+
 
 From the third equation of system (12), we obtain
+
+\begin{comment}
 
 x ˙ 3 (t) = x 3 (t)[r 3 + a 31 x 1 (t − τ) + a 32 x 2 (t − τ) − a 33 1 x 3 (t) − a 33 2 x 3 (t − τ) + d 3 u 3 
 (t)]
@@ -547,43 +467,60 @@ x ˙ 3 (t) = x 3 (t)[r 3 + a 31 x 1 (t − τ) + a 32 x 2 (t − τ) − a 33 1 
 ≤ x 3 (t)[r 3 m + a 31 m M 1 + a 32 m M 2 + d 3 m N 3 − a 33 1l x 3 (t) − a 33 2l x 3 (t − τ)]
 
 ≤ x 3 (t)[r 3 m + (a 31 m + a 32 m + d 3 m ) max { M 1 , M 2 , N 3 } − a 33 1l x 3 (t) − a 33 2l x 3 (t − τ)].
+\end{comment}
+
 
 By Lemma 2.2, it holds that
+
+\begin{comment}
 
 lim sup x 3 (t) ≤ x 3 ∗ exp((r 3 m + (a 31 m + a 32 m + d 3 m ) max { M 1 , M 2 , N 3 } )τ) = M 3 .
 
 (26)
 
 t→ + ∞
+\end{comment}
 
-where x 3 ∗ is the unique positive solution of the following equation
 
+where $x_3^*$  is the unique positive solution of the following equation
+
+\begin{comment}
 x 3 (t)[r 3 m + (a 31 m + a 32 m + d 3 m ) max { M 1 , M 2 , N 3 } − (a 33 1l + a 33 2l )x 3 ] = 0.
+\end{comment}
 
 From the fourth equation of system (12), one has
 
+\begin{comment}
 u ˙ 1 (t) ≤ e 1 m − f 1 l u 1 (t) + q 1 m M 1 .
+\end{comment}
 
 Thus, according to Lemma 2.1, it follows that
 
+\begin{comment}
 e 1 m + q1 m M1  lim sup u 1 (t) ≤ = N 1 . t→ + ∞ f1 l 
+\end{comment}
 
 (27)
 
 On the contrary, from the first equation of system (12), we have
 
+\begin{comment}
 x ˙ 1 (t) ≥ x 1 (t)[r 1 − a 11 1 x 1 (t − τ) − a 11 2 x 1 (t − 2τ) − a 12 x 2 (t − 2τ) − d 1 (t)u 1 (t)]
 
 ≥ x 1 (t)[r 1 l − a 11 1m x 1 (t − τ) − a 11 2m x 1 (t − 2τ) − a 12 m M 2 − d 1 m N 1 ].
+\end{comment}
 
 By Lemma 2.3, one easily verifies that
 
+\begin{comment}
 lim inf x 1 (t) t→ + ∞
 
 r1 l −a12 m M2 −d1 m N1  ≥ exp[2(r 1 l − a 12 m M 2 − d 1 m N 1 − (a 11 1m + a 11 2m )M 1 )τ] = m 1 .
+\end{comment}
 
 By the same way, from the second and third equations of system (12), we deduce
 
+\begin{comment}
 x ˙ 2 (t) ≥ x 2 (t)[r 2 − a 21 x 1 (t − 2τ) − a 22 1 x 2 (t − τ) − a 22 2 x 2 (t − 2τ)]
 
 ≥ x 2 (t)[r 2 l − a 21 m M 1 − a 22 1m x 2 (t − τ) − a 22 2m x 2 (t − 2τ)],
@@ -591,44 +528,60 @@ x ˙ 2 (t) ≥ x 2 (t)[r 2 − a 21 x 1 (t − 2τ) − a 22 1 x 2 (t − τ) �
 x ˙ 3 (t) ≥ x 3 (t)[r 3 + a 31 x 1 (t − τ) + a 32 x 2 (t − τ) − a 33 1 x 3 (t) − a 33 2 x 3 (t − τ)]
 
 ≥ x 3 (t)[r 3 l + a 31 l m 1 + a 32 l m 2 − a 33 1m x 3 (t) − a 33 2m x 3 (t − τ)].
+\end{comment}
 
 Thus, by Lemma 2.3, we have
 
+\begin{comment}
 r2 l  −a21 m M1  lim inf x 2 (t) ≥ exp[(r 2 l − a 21 m M 1 − (a 22 1m + a 22 2m )M 2 )2τ] = m 2 , t→ + ∞ a 22 1m 
 + a22 2m 
+\end{comment}
 
 (29)
 
 and
 
+\begin{comment}
 lim inf x 3 (t) t→ + ∞
 
 r 3 l + a31 l m 1 + a32 l m2  ≥ exp[(r 3 l + a 31 l m 1 + a 32 l m 2 − (a 33 1m + a 33 2m )M 3 )τ] = m 3 . (30) a 33 
 1m + a33 2m 
+\end{comment}
 
 According to the fourth equation of system (12), we have
 
-u ˙ 1 (t) ≥ e 1 l − f 1 m u 1 (t) + q 1 l m 1 .
+\[
+\dot{u}_1 (t) \geq e_1^l - f_1^m u_1(t) + q_1^l m_1 .
+\]
 
 From Lemma 2.1, we can obtain
 
-e 1 l + q1 l m1  lim inf u 1 (t) ≥ = n 1 . t→ + ∞ f1 m 
+\[
+\lim_{t \to + \infty} \inf u_1 (t) \geq \frac{e_1^l + q_1^l m_1}{f_1^m}  = n_1 .
+\]
+
 
 (31)
 
 Similarly, from the fifth and sixth equations of system (12), it follows that
 
+\begin{comment}
 u ˙ 2 (t) ≥ e 2 l − f 2 m u 2 (t) − q 2 m M 2 , u ˙ 3 (t) ≥ e 3 l − f 3 m u 3 (t) − q 3 m M 3 .
+\end{comment}
 
 Moreover, by Lemma 2.1, it follows that
 
+\begin{comment}
 e2 l  −q2 m M2  lim inf u 2 (t) ≥ = n 2 , t→ + ∞ f2 m 
+\end{comment}
 
 (32)
 
 and
 
+\begin{comment}
 e3 l  −q3 m M3  lim inf u 3 (t) ≥ = n 3 . t→ + ∞ f3 m 
+\end{comment}
 
 (33)
 
@@ -639,29 +592,31 @@ From (15), (16), and (24)–(33), this completes the proof of Theorem 2.1.
 In this section, we shall prove that the system (12) is globally attractive. To get the sufficient conditions for 
 globally attractive of system (12), we give firstly the following definition and Lemma.
 
-Definition 3.1: System (12) is said to be globally attractive, if there exists a positive solution X(t) = (x 1 (t), x 
-2 (t), x 3 (t), u 1 (t), u 2 (t), u 3 (t)) of the system (12) such that
+Definition 3.1: System (12) is said to be globally attractive, if there exists a positive solution $X(t) = (x_1(t), x_ 
+2 (t), x_3(t), u_1 (t), u_2 (t), u_3 (t))$ of the system (12) such that
 
-lim | x i (t) − y i (t) | = 0, lim | u i (t) − v i (t) | = 0, t→ + ∞ t→ + ∞
+\[
+\lim_{t \to + \infty} | x_i (t) - y_i (t) | = 0, \lim_{t \to + \infty} | u_i (t) - v_i (t) | = 0,
+\]
 
-for any other positive solution Y(t) = (Y 1 (t), Y 2 (t), Y 3 (t), v 1 (t), v 2 (t), v 3 (t)) of the system (12).
 
-Lemma 3.1 (See [28], Lemma 8.2): If the function f (t) : R + → R is uniformly continuous, and the limit lim f (s)ds 
-exists and is finite, thent→ lim f (t) = 0.
+for any other positive solution $Y(t) = (Y_1 (t), Y_2 (t), Y_3 (t), v_1 (t), v_2 (t), v_3 (t))$ of the system (12).
 
-t→ + ∞
+Lemma 3.1 (See [28], Lemma 8.2): If the function $f(t) : R^+ \to R$ is uniformly continuous, and the limit $\lim_{t \to + \infty} \int_0^t f(s)ds$ 
+exists and is finite, then $\lim_{t \to + \infty} f (t) = 0$.
 
-t ∫ 0
 
-+ ∞
+Theorem 3.1: Let $a_{11}^M = max { a_{11}^{1m}, a_{11}^{2m} } , a_{22}^M = \max { a_{22}^{1m} , a_{22}^{2m} }$ . Assume that the system (12) 
+satisfies $(H_1 ) - (H_{10})$ and the following conditions satisfy
 
-Theorem 3.1: Let a 11 M = max { a 11 1m , a 11 2m } , a 22 M = max { a 22 1m , a 22 2m } . Assume that the system (12) 
-satisfies (H 1 ) − (H 10 ) and the following conditions satisfy
+\[
+(H_{11} ) \lim_{t \to + \infty} \inf A_i(t) > 0, B_i > 0, \text{(i = 1, 2, 3)}
+\]
 
-(H 11 ) lim inf A i (t) > 0, B i > 0, (i = 1, 2, 3) t→ + ∞
 
 where
 
+\begin{comment}
 2 t A 1 (t) = a 11 1l + a 11 2l − ∑ a 11 k (s + kτ)ds[r 1 m + (a 11 1m + a 11 2m )M1  ∫ k=1 t−kτ
 
 2 t + kτ + a 12 m M 2 + a 13 m M 3 + d 1 m N 1 ] − M 1 ∑ a 11 k (s + kτ)ds × a 11 k (t + kτ) ∫ k=1 ( t )
@@ -690,6 +645,7 @@ B 1 = f 1 l − (1 + τM 1 (a 11 1m + 2a 11 2m ))d 1 m ,
 B 2 = f 2 l − (1 + τM 2 (a 22 1m + 2a 22 2m ))d 2 m ,
 
 B 3 = f 3 l − (1 + τM 3 a 33 2m )d 3 m .
+\end{comment}
 
 Then system (12) is globally attractive.
 
@@ -697,14 +653,19 @@ Proof. Suppose that (x 1 (t), x 2 (t), x 3 (t), u 1 (t), u 2 (t), u 3 (t)) and (
 2 (t), v 3 (t)) are any two different positive solutions of the system (12). Then from Theorem 2.1, there exist 
 positive constants M i , N i , m i , n i , i = 1, 2, 3 and T, such that
 
+\begin{comment}
 m i ≤ x i (t), y i (t) ≤ M i , n i ≤ u i (t), v i (t) ≤ N i , i = 1, 2, 3, for all t ≥ T.
+\end{comment}
 
 Define
 
+\begin{comment}
 V 11 (t) = | ln x 1 (t) − ln y 1 (t) | .
+\end{comment}
 
 Calculating the upper right derivative of V 11 (t) along the solution of system (12), we obtain
 
+\begin{comment}
 D + V 11 (t) = sgn(x 1 (t) − y 1 (t))[−a 11 1 (t)(x 1 (t − τ) − y 1 (t − τ))
 
 − a 11 2 (t)(x 1 (t − 2τ) − y 1 (t − 2τ))
@@ -766,9 +727,11 @@ t t ˙1  + a 11 1 (t) (˙x 1 (θ) − y ˙ 1 (θ)dθ + a 11 2 (t) (˙x 1 (θ) �
 × | x 1 (θ − τ) − y 1 (θ − τ) | + a 11 2 (θ) | x 1 (θ − 2τ) − y 1 (θ − 2τ) |
 
 + a 12 (θ) | x 2 (θ − 2τ) − y 2 (θ − 2τ) |
+\end{comment}
 
 (34)
 
+\begin{comment}
 + a 13 (θ) | x 3 (θ − τ) − y 3 (θ − τ) | + d 1 (θ) | u 1 (θ) − v 1 (θ) | ])dθ).
 
 Next, we define that 2 t t V 12 (t) = ∑ a 11 k (s + kτ)([r 1 (θ) + a 11 1 (θ)y 1 (θ − τ) + a 11 2 (θ)y 1 (θ − 2τ) 
@@ -783,9 +746,11 @@ Next, we define that 2 t t V 12 (t) = ∑ a 11 k (s + kτ)([r 1 (θ) + a 11 1 (�
 (35)
 
 + d 1 (θ) | u 1 (θ) − v 1 (θ) | )dθds.
+\end{comment}
 
 Then, from (34) and (35), we have
 
+\begin{comment}
 2 ∑ V 1i (t) ≤ −(a 11 1 (t) + a 11 2 (t)) | x 1 (t) − y 1 (t) | + d 1 (t) | u 1 (t) − v 1 (t) | i=1
 
 + a 12 (t) | x 2 (t − 2τ) − y 2 (t − 2τ) | + a 13 (t) | x 3 (t − τ) − y 3 (t − τ) |
@@ -816,9 +781,12 @@ Then, from (34) and (35), we have
 (36)
 
 −y 3 (t − τ) | ].
+\end{comment}
+
 
 Define
 
+\begin{comment}
 2 t w + kτ V 13 (t) = M 1 ∑ a 11 k (s + kτ)a 11 k (w + kτ) | x 1 (w) − y 1 (w) | dsdw ∫ ∫ k=1 t−kτ w
 
 2 t + 2τM 1 a 11 M ∑ a 11 k (w + kτ) | (x 1 (w) − y 1 (w) | dw ∫ k=1 t−kτ
@@ -826,6 +794,7 @@ Define
 t + (1 + τM 1 (a 11 1m + 2a 11 2m )) a 12 (w + 2τ) | x 2 (w) − y 2 (w) | dw ∫ t−2τ
 
 t + (1 + τM 1 (a 11 1m + 2a 11 2m )) a 13 (w + τ) | x 3 (w) − y 3 (w) | dw. ∫ t−τ
+\end{comment}
 
 (37)
 
@@ -837,6 +806,7 @@ V 1 (t) = V 11 (t) + V 12 (t) + V 13 (t).
 
 According to (36) and (37), calculating the upper right derivative of V 1 (t), we have
 
+\begin{comment}
 2 t D + V 1 (t) ≤ − { a 11 1l + a 11 2l − ∑ a 11 k (s + kτ)ds[r 1 m + (a 11 1m + a 11 2m )M1  ∫ k=1 t−kτ
 
 2 t + kτ + a 12 m M 2 + a 13 m M 3 + d 1 m N 1 ] − M 1 ∑ ( a 11 k (s + kτ)ds × a 11 k (t + kτ)) ∫ k=1 t
@@ -849,8 +819,11 @@ According to (36) and (37), calculating the upper right derivative of V 1 (t), w
 
 + (1 + M 1 τ(a 11 1m + 2a 11 2m ))d 1 m | u 1 (t) − v 1 (t) | .
 
-Similarly, we define V 21 (t) = | ln x 2 (t) − ln y 2 (t) | , then one obtain
+\end{comment}
 
+Similarly, we define $V_{21}(t) = | \ln x_2 (t) - \ln y_2(t) |$ , then one obtain
+
+\begin{comment}
 D + V 21 (t) = sgn(x 2 (t) − y 2 (t))[−a 21 (t)(x 1 (t − 2τ) − y 1 (t − 2τ)) − a 22 1 (t)(x 2 (t − τ) − y 2 (t 
 − τ))
 
@@ -900,11 +873,13 @@ k=1 t−kτ
 
 + a 22 2 (θ) | x 2 (θ − 2τ) − y 2 (θ − 2τ) | + a 23 (θ) | x 3 (θ −τ) − y 3 (θ − τ) | + d 2 (θ) | u 2 (θ)−v 2 
 (θ) | ])dθ).
+\end{comment}
 
 (40)
 
 On the other hand, define
 
+\begin{comment}
 2 t t V 22 (t) = ∑ a 22 k (s + kτ)([r 2 (θ) + a 21 (θ)y 1 (θ − 2τ) + a 22 1 (θ)y 2 (θ − τ) ∫ ∫ k=1 t−kτ s
 
 + a 22 2 (θ)y 2 (θ − 2τ) + a 23 (θ)y 3 (θ − τ) + d 2 (θ)v 2 (θ)] | x 2 (θ) − y 2 (θ) |
@@ -917,8 +892,11 @@ On the other hand, define
 
 + d 2 (θ) | u 2 (θ) − v 2 (θ) | ])dθds.
 
+\end{comment}
+
 From (40), (41), we have
 
+\begin{comment}
 2 ∑ D + V 2i ≤ −(a 22 1 (t) + a 22 2 (t)) | x 2 (t) − y 2 (t) | + d 2 (t) | u 2 (t) − v 2 (t) | i=1
 
 + a 21 (t) | x 1 (t − 2τ) − y 1 (t − 2τ) |
@@ -954,8 +932,11 @@ From (40), (41), we have
 
 −y 3 (t − τ) | ].
 
+\end{comment}
+
 Furthermore, define
 
+\begin{comment}
 2 t w + kτ V 23 (t) = M 2 ∑ a 22 k (s + kτ)a 22 k (w + kτ) | x 2 (w) − y 2 (w) | dsdw ∫ ∫ k=1 t−kτ w
 
 + 2τM 2 a 22 M ∑ a 22 k (w + kτ) | x 2 (w) − y 2 (w) | dw ∫ k=1 t−kτ
@@ -963,6 +944,7 @@ Furthermore, define
 t + (1 + τM 2 (a 22 1m + 2a 22 2m )) a 21 (w + 2τ) | x 1 (w) − y 1 (w) | dw ∫ t−2τ
 
 t + (1 + τM 2 (a 22 1m + 2a 22 2m )) a 23 (w + τ) | x 3 (w) − y 3 (w) | dw. ∫ t−τ
+\end{comment}
 
 (43)
 
@@ -974,6 +956,7 @@ V 2 (t) = V 21 (t) + V 22 (t) + V 23 (t).
 
 From (42) and (43), we can get the upper right derivative of V 2 (t)
 
+\begin{comment}
 2 t D + V 2 (t) ≤ − { a 22 1l + a 22 2l − ∑ a 22 k (s + kτ)ds[r 2 m + a 21 m M 1 + (a 22 1m + a 22 2m )M2  ∫ k=1 
 t−kτ
 
@@ -989,12 +972,17 @@ t−kτ
 
 + (1 + τM 2 (a 22 1m + 2a 22 2m ))d 2 m | u 2 (t) − v 2 (t) | .
 
+\end{comment}
+
 Similarly, we define
 
-V 31 (t) = | ln x 3 (t) − ln y 3 (t) | .
+\[
+V_{31}(t) = | \ln x_3 (t) - \ln y_3 (t) | .
+\]
 
 Then, it follows that
 
+\begin{comment}
 D + V 31 = sgn(x 3 (t) − y 3 (t))[a 31 (t)(x 1 (t − τ) − y 1 (t − τ)) + a 32 (t)(x 2 (t − τ)
 
 − y 2 (t − τ)) − a 33 1 (t)(x 3 (t) − y 3 (t)) − a 33 2 (t)(x 3 (t − τ) − y 3 (t − τ))
@@ -1045,8 +1033,12 @@ t × ([r 3 (θ) + a 31 (θ)y 1 (θ − τ) + a 32 (θ)y 2 (θ − τ) + a 33 1 (
 
 + a 33 2 (θ) | x 3 (θ − τ) − y 3 (θ − τ) | + d 3 (θ) | u 3 (θ) − v 3 (θ) | ])dθ.
 
+\end{comment}
+
+
 Let
 
+\begin{comment}
 t t V 32 (t) = a 33 2 (s + τ)([r 3 (θ) + a 31 (θ)y 1 (θ − τ) + a 32 (θ)y 2 (θ − τ) ∫ t−τ ∫ s
 
 + a 33 1 (θ)y 3 (θ) + a 33 2 (θ)y 3 (θ − τ) + d 3 (θ)v 3 (θ)] | x 3 (θ) − y 3 (θ) |
@@ -1059,8 +1051,11 @@ t t V 32 (t) = a 33 2 (s + τ)([r 3 (θ) + a 31 (θ)y 1 (θ − τ) + a 32 (θ)y
 
 + d 3 (θ) | u 3 (θ) − v 3 (θ) | ])dθds.
 
+\end{comment}
+
 Then, we have
 
+\begin{comment}
 2 ∑ D + V 3i ≤ −(a 33 1 (t) + a 33 2 (t)) | x 3 (t) − y 3 (t) | + d 3 (t) | u 3 (t) − v 3 (t) | i=1
 
 + a 31 (t) | x 1 (t − τ) − y 1 (t − τ) | + a 32 (t) | (x 2 (t − τ) − y 2 (t − τ) |
@@ -1089,13 +1084,18 @@ t + a 32 (t) | (x 2 (t − τ) − y 2 (t − τ) | + a 33 2 (s + τ)ds[r 3 (t) 
 
 + a 33 2 (t) | x 3 (t − τ)−y 3 (t − τ) | ].
 
+\end{comment}
+
+
 Take
 
+\begin{comment}
 t V 33 (t) = (1 + τM 3 a 33 2m ) a 31 (w + τ) | x 1 (w) − y 1 (w) | dw ∫ t−τ
 
 t + (1 + τM 3 a 33 2m ) a 32 (w + τ) | x 2 (w) − y 2 (w) | dw ∫ t−τ
 
 t + τM 3 a 33 2m a 33 2 (w + τ) | x 3 (w) − y 3 (w) | dw. ∫ t−τ
+\end{comment}
 
 (49)
 
@@ -1107,6 +1107,8 @@ V 3 (t) = V 31 (t) + V 32 (t) + V 33 (t).
 
 Then, we have
 
+\begin{comment}
+
 t D + V 3 (t) ≤ − { a 33 1l + a 33 2l − τM 3 a 33 2m [a 33 1m + a 33 2 (t + τ)] − a 33 2 (s + τ)ds ∫ t−τ
 
 × [r 3 m + a 31 m M 1 + a 32 m M 2 + (a 33 1m + a 33 2m )M 3 + d 3 m N 3 ] }
@@ -1114,9 +1116,11 @@ t D + V 3 (t) ≤ − { a 33 1l + a 33 2l − τM 3 a 33 2m [a 33 1m + a 33 2 (t
 × | x 3 (t) − y 3 (t) | + (1 + τM 3 a 33 2m )a 31 (t + τ) | x 1 (t) − y 1 (t) |
 
 + (1 + τM 3 a 33 2m )a 32 (t + τ) | (x 2 (t) − y 2 (t) | + (1 + τM 3 a 33 2m )d 3 m | u 3 (t)−v 3 (t) | .
+\end{comment}
 
 (51)
 
+\begin{comment}
 V4 
 
 (t)
@@ -1183,80 +1187,93 @@ u3
 
 (t)−
 
-Take ln v 3 (t) | , and calculate the upper right derivative of V 4 (t), V 5 (t), V 6 (t), we have
+\end{comment}
 
+Take  v 3 (t) | , and calculate the upper right derivative of V 4 (t), V 5 (t), V 6 (t), we have
+
+\begin{comment}
 D + V 4 (t) ≤ sgn(u 1 (t) − v 1 (t))[−f 1 (t)(u 1 (t) − v 1 (t)) + q 1 (t)(x 1 (t) − y 1 (t))
+\end{comment}
+
 
 (52)
 
+\begin{comment}
 ≤ −f 1 l | u 1 (t) − v 1 (t) | + q 1 m | x 1 (t) − y 1 (t) | ,
 
 D + V 5 (t) ≤ sgn(u 2 (t) − v 2 (t))[−f 2 (t)(u 2 (t) − v 2 (t)) + q 2 (t)(x 2 (t) − y 2 (t))
+\end{comment}
 
 (53)
 
+\begin{comment}
 ≤ −f 2 l | u 2 (t) − v 2 (t) | + q 2 m | x 2 (t) − y 2 (t) | ,
 
 D + V 6 (t) ≤ sgn(u 3 (t) − v 3 (t))[−f 3 (t)(u 3 (t) − v 3 (t)) + q 3 (t)(x 3 (t) − y 3 (t))
+\end{comment}
 
 (54)
 
+\begin{comment}
 ≤ −f 3 l | u 3 (t) − v 3 (t) | + q 3 m | x 3 (t) − y 3 (t) | .
+\end{comment}
 
 Moreover, we give a Lyapunov function as follows
 
-6 V(t) = ∑ V i (t), i=1
+\[
+V(t) = \sum_{i=1}^6  V_i(t),
+\]
 
 from (39), (45), (51)–(54), we can obtain
 
-3 D + V(t) ≤ − ∑ (A i (t) | x i (t) − y i (t) | + B i | u i (t) − v i (t) | ) i=1
+\[
+D^+ V(t) \leq - \sum_{i=1}^3 (A_i (t) | x_i(t) - y_i(t) | + B_i | u_i(t) - v_i (t) | ) 
+\]
 
 (55)
 
-for all t ≥ t + τ.
+for all $t \geq t + \tau$.
 
-In view of the conditions of Theorem 3.1, there exist a constant α > 0 and T∗  such that for all t ≥ T ∗ , it holds 
+In view of the conditions of Theorem 3.1, there exist a constant $\alpha > 0$ and $T^* \geq T + \tau$  such that for all $t \geq T^*$  , it holds 
 that
 
-≥
-
-T + τ
-
-A i (t) ≥ α > 0, B i ≥ α > 0, (i = 1, 2, 3).
+\[
+A_i(t) \geq \alpha > 0, B_i \alpha > 0, (i = 1, 2, 3).
+\]
 
 (56)
 
-Integrating from T ∗ to t on both sides of (55) and by (56), we have
+Integrating from $T^*$  to t on both sides of (55) and by (56), we have
 
-t 3 V(t) + α ( ∑ [ | x i (s) − y i (s) | + | u i (s) − v i (s) | ])ds ≤ V(T ∗ ) < + ∞. ∫ T ∗ i=1
+\[
+V(t) + \alpha \int_{T^*}^t ( \sum_{i=1}^3 [ | x_i(s) - y_i(s) | + | u_i (s) - v_i (s) | ])ds \leq V(T^*) < + \infty .
+\]
+
 
 (57)
 
-Therefore, V(t) is bounded on [T ∗ , + ∞), and we have
+Therefore, V(t) is bounded on $[T^* , + \infty)$, and we have
 
-∞ 3 V(T) ( [ | x i (t) − y i (t) | + | u i (t) − v i (t) | ])ds ≤ < + ∞. ∫ ∗ ∑ α T i=1
+\[
+\int_{T^*}^{\infty} ( \sum_{i=1}^3 [ | x_i(t) - y_i(t) | + | u_i (t) - v_i (t) | ])ds \leq \frac{V(T)}{\alpha} < + \infty
+\]
 
 (58)
 
 By (58), we have
 
-3 ∑ ( | x i (t) − y i (t) | + | u i (t) − v i (t) | ) ∈ L 1 (T, + ∞). i=1
+\[
+\sum_{i=1}^3 ( | x_i (t) - y_i (t) | + | u_i (t) - v_i (t) | ) \in  L^1 (T, + \infty).
+\]
 
 (59)
 
-3
 
-From the uniformity permanence of the system (12),
+From the uniformity permanence of the system (12), $\sum_{i=1}^3 [ | x_i (t) - y_i (t) | + | u_i(t)-v_i (t) | ]$ is uniformity continuous on $[T^*, + \infty)$. By Lemma 3.1, we can obtain
 
-∑
-
-i=1
-
-[ | x i (t) − y i (t) | + | u i (t)−
-
-v i (t) | ] is uniformity continuous on [T ∗ , + ∞). By Lemma 3.1, we can obtain
-
-lim | x i (t) − y i (t) | = 0, lim | u i (t) − v i (t) | = 0, (i = 1, 2, 3). t→ + ∞ t→ + ∞
+\[
+lim_{t \to + \infty} | x_i (t) - y_i(t) | = 0, \lim_{t \to + \infty} | u_i (t) - v_i (t) | = 0, (i = 1, 2, 3). 
+\]
 
 This completes the proof of Theorem 3.1.
 
@@ -1266,10 +1283,11 @@ In this section, we give some numerical simulations to support our theoretical a
 the following Lotka–Volterra competitivecompetitive–cooperative model with feedback controls and time delays and 
 choose the
 
-Figure 1. The numerical solution of systems (60) with the initial conditions (61) and τ = 0.075.
+Figure 1. The numerical solution of systems (60) with the initial conditions (61) and $\tau = 0.075$.
 
 periodic function as the coefficients of the model
 
+\begin{comment}
 x˙ 1 (t) = x 1 (t)[ 2 + | sin(t) | − 5 + | sin(t) | x 1 (t − τ) − 1 + | cos(t) | x 1 (t − 2τ) − 2 + sin(t) 550 x 
 2 (t − 2τ) ⎪ ⎪ ⎧ ⎪ ⎪ 2 3 5 + 2 + cos(t) 300 x 3 (t − τ) − (0.015 + 0.001 cos πt)u 1 (t)], ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ x˙ 
 2 (t) = x 2 (t)[ 2 + | 2 cos(t) | − 2 + cos(t) 550 x 1 (t − 2τ) − 6 + | 4 cos(t) | x 2 (t − τ) − 1 + | 5 sin(t) | 
@@ -1279,11 +1297,13 @@ sin(t) | + 1.5 + cos(t) 1500 x 1 (t − τ) + 1.5 + sin(t) 1500 x 2 (t − τ) �
 0.1 cos πt)u 1 (t) + (0.0016 + 0.0003 sin πt)x 1 (t), ⎪ ⎪ ⎪ ⎪ u˙ 2 (t) = (0.3 + 0.05 cos πt) − (0.7 + 0.2 cos 
 πt)u 2 (t) − (0.0015 + 0.0005 sin πt)x 2 (t), ⎪ ⎩ u˙ 3 (t) = (3 + 0.4 sin πt) − (5 + 0.5 sin πt)u 3 (t) − (0.0005 
 + 0.00015 sin πt)x 3 (t).
+\end{comment}
 
 (60)
 
 By calculating, we have
 
+\begin{comment}
 P 1 ≈ 5.50, P 2 ≈ 6.14, x 1 ∗ ≈ 1.22, x 2 ∗ ≈ 1.09, x 3 ∗ ≈ 0.37,
 
 M 1 ≈ 1.38, M 2 ≈ 1.54, M 3 ≈ 0.4,
@@ -1299,11 +1319,12 @@ M 1 ≈ 0.99, e 2 l − q 2 m M 2 ≈ 0.25, e 3 l − q 3 m M 3 ≈ 2.60,
 lim inf A 1 ≈ 0.35,(t) lim inf A 2 (t) ≈ 0.40, lim inf A 3 (t) ≈ 0.48, t→ + ∞ t→ + ∞ t→ + ∞
 
 B 1 ≈ 0.48, B 2 ≈ 0.49, B 3 ≈ 4.48.
+\end{comment}
 
 It is easy to show that the system (60) satisfies the conditions of Theorem 3.1. It follows from Theorem 3.1 that the 
 Lotka–Volterra competitive-competitive–cooperative model (60) is permanent and globally attractive. By employing the 
 software package MATLAB 7.1, we can solve the numerical solutions of the system (60) which are shown in Figures 1–3. 
-Figure 1 shows that the permanence of the systems (60) with time delay τ = 0.075 and the
+Figure 1 shows that the permanence of the systems (60) with time delay $\tau = 0.075$ and the
 
 initial conditions
 

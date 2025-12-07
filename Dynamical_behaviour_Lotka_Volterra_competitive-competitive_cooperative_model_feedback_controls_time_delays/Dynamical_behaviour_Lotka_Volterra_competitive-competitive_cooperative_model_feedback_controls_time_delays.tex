@@ -5,6 +5,201 @@
 
 \begin{document}
 
+Dynamical behaviour of a Lotka–Volterra competitive-competitive–cooperative 
+model with feedback controls and time 
+delays - 2019
+
+\hfill
+
+ABSTRACT
+
+The aim of this paper is to investigate the dynamical behaviour of a class of three species Lotka–Volterra 
+competitive-competitive-cooperative models with feedback controls and time delays. By developing a new analysis 
+technique, we obtain some sufficient conditions that ensure these models have the dynamical property of permanence. We 
+also give some sufficient conditions that guarantee the global attractivity of positive solutions for this system by 
+constructing a new suitable Lyapunov function. Finally, we give some numerical simulations to illustrate our results 
+in this paper.
+
+\hrule
+
+El objetivo de este artículo es investigar el comportamiento dinámico de una clase de tres modelos Lotka-Volterra 
+competitivo-competitivo-cooperativo con controles de retroalimentación y retardos temporales. Mediante el desarrollo 
+de una nueva técnica de análisis, obtenemos condiciones suficientes que garantizan la propiedad dinámica de 
+permanencia de estos modelos. También proporcionamos condiciones suficientes que garantizan la atracción global de 
+soluciones positivas para este sistema mediante la construcción de una nueva función de Lyapunov adecuada. Finalmente, 
+presentamos algunas simulaciones numéricas para ilustrar nuestros resultados.
+
+\hfill
+
+ 1. Introduction
+
+\hfill
+
+The modelling and analysis of the dynamics of biological populations by means of differential equations are of the 
+primary concern in population growth problems. A well-known and extensively studied class of models in population 
+dynamics is the Lotka–Volterra system which models certain types of interactions among various species. In the real 
+world, the growth rate of a natural species will not often respond immediately to changes in its own species or that 
+of an interacting species, but will rather do so after a time lag. Time delays are introduced to make the model 
+respond better to impersonal law (see, [1–11]).
+
+\hrule
+
+El modelado y análisis de la dinámica de poblaciones biológicas mediante ecuaciones diferenciales es fundamental en 
+los problemas de crecimiento poblacional. Un modelo bien conocido y ampliamente estudiado en dinámica poblacional es 
+el sistema Lotka-Volterra, que modela ciertos tipos de interacciones entre diversas especies. En el mundo real, la 
+tasa de crecimiento de una especie natural no suele responder inmediatamente a los cambios en su propia especie o en 
+la de una especie con la que interactúa, sino que lo hará con un cierto desfase temporal. Se introducen desfases 
+temporales para que el modelo responda mejor a la ley impersonal (véase [1–11]).
+
+\hrule
+
+Lu et al. in [2] proposed and studied the following Lotka–Volterra system with discrete delays
+
+\hrule
+
+Lu et al. en [2] propusieron y estudiaron el siguiente sistema Lotka-Volterra con retrasos discretos
+
+\[
+\left\{\begin{matrix}
+\dot{x}_1(t) = x_1(t)[r_1 - a_1 x_1 (t) - a_{11} x_1 (t - \tau_{11} ) + a_{12} x_2 (t - \tau_{12} ) \\
+\dot{x}_2(t) = x_2(t)[r_2 - a_2 x_2 (t) - a_{21} x_1 (t - \tau_{21} ) + a_{22} x_2 (t - \tau_{22} )
+\end{matrix}\right.
+\]
+
+(1)
+
+with initial conditions
+
+\[
+x_i(t) = \phi_i(t) \geq 0, t \in [-\tau_0 , 0]; \phi_i(0) > 0, (i = 1, 2)
+\]
+
+
+where $r_i, a_i, a_{ij}$ and $\tau_{ij}$ are constants with $a_i > 0$, $a_{ij} \geq 0$ (i, j = 1, 2) and  0 = max {  ij : i, j = 1, 2 
+} , $\phi_{ij}$ is continuous on [-$\tau$ 0 , 0]. They show that delays can change the permanence for Lotka–Volterra cooperative 
+systems. For certain delays with the same length, the delayed system has a similar property to the corresponding 
+system without delays in the sense of permanence, but for a general delay case, the delays may destroy the permanence 
+for the system. In 2010, Nakata and Muroya considered the following nonautonomous Lotka–Volterra cooperative systems 
+with time delays (see, [3])
+
+\hrule
+
+donde $r_i, a_i, a_{ij}$ y $\tau_{ij}$ son constantes con $a_i > 0, a_{ij} \geq 0$ (i, j = 1, 2) y $\tau_0$ = máx{$\tau_{ij}$: i, j = 1, 2} , $\phi_{ij}$ es 
+continuo en $[-\tau 0 , 0]$. Demuestran que los retrasos pueden cambiar la permanencia de los sistemas cooperativos 
+Lotka-Volterra. Para ciertos retrasos con la misma duración, el sistema retrasado tiene una propiedad similar a la del 
+sistema correspondiente sin retrasos en cuanto a la permanencia, pero para un caso general de retraso, los retrasos 
+pueden destruir la permanencia del sistema. En 2010, Nakata y Muroya consideraron los siguientes sistemas cooperativos 
+Lotka-Volterra no autónomos con retrasos temporales (véase [3]).
+
+\[
+\left\{\begin{matrix}
+\dot{x}(t) = x_1(t)[r_1(t) - a_{11}^1(t)x_1(t) - \tau) - a_{11}^2(t)x_1 (t - 2 \tau) + a_{12}^1(t)x_2 (t - 
+\tau)], \\
+\dot{x}(t) = x_2(t)[r_2(t) + a_{21}^0(t)x_1(t) + a_21^1(t)x_1 (t - \tau) - a_{22}^0(t)x_2(t) - a_{22}^1(t) x_2 (t - \tau)
+\end{matrix}\right.
+\]
+
+
+where $x_i(t)$ (i = 1, 2) denote the density of i-species at time t, $\tau$ is a positive constant and $r_i(t), a_{ij}^l(t) (1 \leq i, j \leq 2; 0 \leq l \leq 2)$ are continuous, bounded and strictly positive functions as $t \in [- \tau, + \infty)$. They 
+obtained some sufficient conditions for the permanence of the system (2). Xu and Zu [4] investigated the following 
+two-species delayed competitive model with stage structure and harvesting
+
+\hrule
+
+Donde $x_i(t)$ (i = 1, 2) denota la densidad de i-especies en el tiempo t, $\tau$ es una constante positiva y $r_i(t), a_{ij}^l(t) 
+(1 \leq i, j \leq 2; 0 \leq l \leq 2)$ son funciones continuas, acotadas y estrictamente positivas cuando $t \in [- \tau, + \infty]$. 
+Obtuvieron algunas condiciones suficientes para la permanencia del sistema (2). Xu y Zu [4] investigaron el siguiente 
+modelo competitivo retardado de dos especies con estructura de etapas y cosecha.
+
+
+\[
+\left\{\begin{matrix}
+\frac{dx_1}{dt} = \alpha(t)x_2(t) - \gamma x_1 (t) - \alpha (t - \tau)e^{\gamma \tau} x_2 (t - \tau), \\
+\frac{dx_2(t)}{dt}= \alpha(t - \tau)e^{-\gamma \tau} x_2 (t - \tau) - \beta(t)x_2^2(t) - a_1(t)x_2 
+(t)\gamma(t) - E(t)x_2 (t), \\
+\frac{dy(t)}{dt}= y(t)(r_1(t) - a_2(t)x_2(t) - b(t)y(t)).
+\end{matrix}
+\right.
+\]
+
+
+By using the differential inequality theory, some new sufficient conditions which ensure the permanence of the system 
+are established. In [5], the authors considered the following competitor-competitor–mutualist Lotka–Volterra systems 
+with discrete time delays
+
+\hrule
+
+Mediante la teoría de la desigualdad diferencial, se establecen nuevas condiciones suficientes que garantizan la 
+permanencia del sistema. En [5], los autores consideraron los siguientes sistemas Lotka-Volterra 
+competidor-competitivo-mutualista con retardos discretos.
+
+\[
+\left\{\begin{matrix}
+\dot{x}_1(t) = x_1(t)[r_1 (t) - a_{11}^1(t)x_1 (t - \tau) - a_{11}^2(t)x_1 (t - 2 \tau) - a_{12}(t)x_2 (t - 
+2\tau) + a_{13}(t)x_3 (t - \tau)], \\\dot{x}_2(t) = x_2(t) [r_2(t) - a_{21}(t)x_1(t - 2 \tau) - a_{22}^1(t)x_2(t - \tau) - a_{22}^2(t)x_2(t - 
+2 \tau) + a_{23}(t)x_3 (t - \tau)], \\
+\dot{x} = x_3(t)[r_3 (t) + a_{31}(t)x_1 (t - \tau) + a_{32} (t)x 2 (t - \tau) - a_{33}^1(t) x_3 (t) - a_{33}^2(t) x_3 (t - \tau)]. \\
+\end{matrix}\right.
+\]
+
+
+(4)
+
+And some sufficient conditions which guarantee the boundedness, permanence and global attraction for system (4) were 
+obtained. In 2011, Xu et al. [6] studied the dynamical behaviours for the following Lokta–Volterra predator–prey model 
+with two delays
+
+\hrule
+
+Se obtuvieron condiciones suficientes que garantizan la acotación, la permanencia y la atracción global del sistema 
+(4). En 2011, Xu et al. [6] estudiaron los comportamientos dinámicos del siguiente modelo depredador-presa de 
+Lokta-Volterra con dos retrasos.
+
+\[
+\left\{\begin{matrix}
+\dot{x}_1(t) = x_1(t)[r_1 - a_{11} x_1 (t - \tau_1 ) - a_{12} y(t - \tau_2 )], 
+\dot{x}_2(t) = x_2(t)[-r_2 - a_{21} x_1 (t - \tau_1 ) - a_{22} y(t - \tau_2 )].
+\end{matrix}\right.
+\]
+
+(5)
+
+Its linear stability and Hopf bifurcation are investigated by analysing the associated characteristic transcendental 
+equation. Some explicit formulate for determining the stability and the direction of the Hopf bifurcation periodic 
+solutions are obtained by using normal form theory and centre manifold theory.
+
+\hrule
+
+Se investiga su estabilidad lineal y la bifurcación de Hopf mediante el análisis de la ecuación trascendental 
+característica asociada. Se obtienen fórmulas explícitas para determinar la estabilidad y la dirección de las 
+soluciones periódicas de la bifurcación de Hopf mediante la teoría de la forma normal y la teoría de la variedad 
+central.
+
+\hrule
+
+One can find that an ecosystem in the real world is continuously distributed by some forces, which can result in 
+changes in the biological parameters such as survival rates. The practical interest in ecology is the question of 
+whether or not an ecosystem can withstand those disturbances which persist for a finite period of time. In the control 
+systems, we regard the disturbance functions as control variables. These are of significance in the control of ecology 
+balance. One of the methods to research it is to alter the system structurally by introducing feedback control 
+variables. The feedback control mechanism might be implemented by means of some biological control schemes or 
+harvesting procedure. In fact, during the last decade, the qualitative behaviour of the population dynamics with 
+feedback control has been studied extensively. In 2009, Nie et al. [12] considered the following non-autonomous 
+predator–prey Lotka–Volterra system with feedback controls
+
+\hrule
+
+En la vida real, un ecosistema se distribuye continuamente por ciertas fuerzas, lo que puede provocar cambios en 
+parámetros biológicos como las tasas de supervivencia. El interés práctico en ecología radica en determinar si un 
+ecosistema puede soportar perturbaciones que persisten durante un período finito. En los sistemas de control, 
+consideramos las funciones de perturbación como variables de control. Estas son importantes para controlar el 
+equilibrio ecológico. Uno de los métodos para investigarlo es alterar la estructura del sistema mediante la 
+introducción de variables de control de retroalimentación. El mecanismo de control de retroalimentación podría 
+implementarse mediante esquemas de control biológico o procedimientos de cosecha. De hecho, durante la última década, 
+se ha estudiado ampliamente el comportamiento cualitativo de la dinámica poblacional con control de retroalimentación. 
+En 2009, Nie et al. [12] consideraron el siguiente sistema Lotka-Volterra depredador-presa no autónomo con controles 
+de retroalimentación.
+
 \begin{comment}
 \[
 \left\{\begin{matrix}
@@ -29,11 +224,13 @@ an appropriate Lyapunov function, some sufficient conditions are obtained for th
 solution to system (6). In [13], Yang, Wang and Chen proposed and studied the following cooperation system with 
 feedback controls
 
-donde x1(t) es la densidad de población de la presa y x2(t) es la densidad de población del depredador, b1(t) y a11(t) 
-son la tasa de crecimiento intrínseca y el coeficiente dependiente de la densidad de la presa, respectivamente; b2(t) 
-y a 22 (t) son la tasa de crecimiento intrínseca y el coeficiente dependiente de la densidad del depredador, 
-respectivamente; a12(t) es la tasa de captura del depredador y a21(t) es la tasa de conversión de nutrientes en la 
-reproducción del depredador; ui(t)(i =1, 2) son variables de control. Estudiaron si los controles de retroalimentación 
+\hrule
+
+donde $x_1(t)$ es la densidad de población de la presa y $x_2(t)$ es la densidad de población del depredador, $b_1(t)$ y $a_{11}(t)$ 
+son la tasa de crecimiento intrínseca y el coeficiente dependiente de la densidad de la presa, respectivamente; $b_2(t)$ 
+y $a_{22}(t)$ son la tasa de crecimiento intrínseca y el coeficiente dependiente de la densidad del depredador, 
+respectivamente; $a_{12}(t)$ es la tasa de captura del depredador y a21(t) es la tasa de conversión de nutrientes en la 
+reproducción del depredador; $u_i(t)$ (i =1, 2) son variables de control. Estudiaron si los controles de retroalimentación 
 tienen o no influencia en la permanencia de una solución positiva de los sistemas generales no autónomos 
 depredador-presa tipo Lotka-Volterra y establecen los criterios generales sobre la permanencia del sistema (6), que es 
 independiente de algunos controles de retroalimentación. Además, al construir una función de Lyapunov apropiada, se 
@@ -54,6 +251,8 @@ species at time t, ui(t), (i = 1, 2) denote feedback controls. They showed that 
 equilibrium, then feedback controls can only influence the position of the positive equilibrium, and have no influence 
 on the stability. In 2018, Wang et al. [14] considered the following three-species Lokta–Volterra predator–prey system 
 with feedback
+
+\hrule
 
 Donde $b_i, a_{ij}, \alpha_i, \eta_i, a_i$, i, j = 1, 2 son constantes positivas. $x_i(t)$, (i = 1, 2) son las densidades de las especies 
 en el tiempo t, $u_i(t)$, (i = 1, 2) representan controles de retroalimentación. Demostraron que si el sistema (7) tiene 
@@ -81,6 +280,8 @@ be found in (cf. [15–21] and the references cited therein). As is known to all
 delay and feedback control can respond better to impersonal law. In recent years, more and more attention has been 
 paid to some ecosystem models with both feedback control and time delay (see, [22–27]). In 1993, Gopalsamy et al. [22] 
 studied a class of autonomous single-species ecosystem with feedback control and time delay
+
+\hrule
 
 Mediante el uso de un teorema de comparación y la construcción de una función de Lyapunov adecuada, así como el 
 desarrollo de nuevas técnicas de análisis, los autores establecieron un conjunto de condiciones suficientes fácilmente 
@@ -736,11 +937,11 @@ Next, we define that 2 t t V 12 (t) = ∑ a 11 k (s + kτ)([r 1 (θ) + a 11 1 (�
 + x 1 (θ)[a 11 1 (θ) | x 1 (θ − τ) − y 1 (θ − τ) | + a 11 2 (θ) | x 1 (θ − 2τ) − y 1 (θ − 2τ) |
 
 + a 12 (θ) | x 2 (θ − 2τ) − y 2 (θ − 2τ) | + a 13 (θ) | x 3 (θ − τ) − y 3 (θ − τ) |
-\end{comment}
 
 (35)
 
 + d 1 (θ) | u 1 (θ) − v 1 (θ) | )dθds.
+\end{comment}
 
 Then, from (34) and (35), we have
 
@@ -771,11 +972,12 @@ Then, from (34) and (35), we have
 −y 1 (t − kτ) | )
 
 + M 1 τ(a 11 1m + 2a 11 2m )[a 12 (t) | x 2 (t − 2τ) − y 2 (t − 2τ) | + a 13 (t) | x 3 (t − τ)
-\end{comment}
 
 (36)
 
 −y 3 (t − τ) | ].
+\end{comment}
+
 
 Define
 
@@ -807,13 +1009,14 @@ According to (36) and (37), calculating the upper right derivative of V 1 (t), w
 2 − 2τM 1 a 11 M ∑ a 11 k (t + kτ) }| x 1 (t) − y 1 (t) | + (1 + τM 1 (a 11 1m + 2a 11 2m ))a 12 (t + 2τ) k=1
 
 × | x 2 (t) − y 2 (t) | + (1 + τM 1 (a 11 1m + 2a 11 2m ))a 13 (t + τ) | x 3 (t) − y 3 (t) |
-\end{comment}
 
 (39)
 
 + (1 + M 1 τ(a 11 1m + 2a 11 2m ))d 1 m | u 1 (t) − v 1 (t) | .
 
-Similarly, we define V 21 (t) = | ln x 2 (t) − ln y 2 (t) | , then one obtain
+\end{comment}
+
+Similarly, we define $V_{21}(t) = | \ln x_2 (t) - \ln y_2(t) |$ , then one obtain
 
 \begin{comment}
 D + V 21 (t) = sgn(x 2 (t) − y 2 (t))[−a 21 (t)(x 1 (t − 2τ) − y 1 (t − 2τ)) − a 22 1 (t)(x 2 (t − τ) − y 2 (t 
@@ -879,11 +1082,12 @@ On the other hand, define
 + x 2 (θ)[a 21 (θ) | x 1 (θ − 2τ) − y 1 (θ − 2τ) | + a 22 1 (θ) | x 2 (θ − τ) − y 2 (θ − τ) |
 
 + a 22 2 (θ) | x 2 (θ − 2τ) − y 2 (θ − 2τ) | + a 23 (θ) | x 3 (θ − τ) − y 3 (θ − τ) |
-\end{comment}
 
 (41)
 
 + d 2 (θ) | u 2 (θ) − v 2 (θ) | ])dθds.
+
+\end{comment}
 
 From (40), (41), we have
 
@@ -918,11 +1122,12 @@ From (40), (41), we have
 −y 2 (t − kτ) | )
 
 + τM 2 (a 22 1m + 2a 22 2m )[a 21 (t) | x 1 (t − 2τ) − y 1 (t − 2τ) | + a 23 (t) | x 3 (t − τ)
-\end{comment}
 
 (42)
 
 −y 3 (t − τ) | ].
+
+\end{comment}
 
 Furthermore, define
 
@@ -957,15 +1162,18 @@ t−kτ
 × | x 2 (t) − y 2 (t) | + (1 + τM 2 (a 22 1m + 2a 22 2m )a 21 (t + 2τ) | x 1 (t) − y 1 (t) |
 
 + (1 + τM 2 (a 22 1m + 2a 22 2m )a 23 (t + τ) | x 3 (t) − y 3 (t) |
-\end{comment}
 
 (45)
 
 + (1 + τM 2 (a 22 1m + 2a 22 2m ))d 2 m | u 2 (t) − v 2 (t) | .
 
+\end{comment}
+
 Similarly, we define
 
-V 31 (t) = | ln x 3 (t) − ln y 3 (t) | .
+\[
+V_{31}(t) = | \ln x_3 (t) - \ln y_3 (t) | .
+\]
 
 Then, it follows that
 
@@ -1015,11 +1223,13 @@ t × ([r 3 (θ) + a 31 (θ)y 1 (θ − τ) + a 32 (θ)y 2 (θ − τ) + a 33 1 (
 + a 33 2 (θ)y 3 (θ − τ) + d 3 (θ)v 3 (θ)] | x 3 (θ) − y 3 (θ) | + x 3 (θ)[a 31 (θ) | x 1 (θ − τ)
 
 − y 1 (θ − τ) | + a 32 (θ) | x 2 (θ − τ) − y 2 (θ − τ) | + a 33 1 (θ) | x 3 (θ) − y 3 (θ) |
-\end{comment}
 
 (46)
 
 + a 33 2 (θ) | x 3 (θ − τ) − y 3 (θ − τ) | + d 3 (θ) | u 3 (θ) − v 3 (θ) | ])dθ.
+
+\end{comment}
+
 
 Let
 
@@ -1031,11 +1241,12 @@ t t V 32 (t) = a 33 2 (s + τ)([r 3 (θ) + a 31 (θ)y 1 (θ − τ) + a 32 (θ)y
 + x 3 (θ)[a 31 (θ) | x 1 (θ − τ) − y 1 (θ − τ) | + a 32 (θ) | x 2 (θ − τ) − y 2 (θ − τ) |
 
 + a 33 1 (θ) | x 3 (θ) − y 3 (θ) | + a 33 2 (θ) | x 3 (θ − τ) − y 3 (θ − τ) |
-\end{comment}
 
 (47)
 
 + d 3 (θ) | u 3 (θ) − v 3 (θ) | ])dθds.
+
+\end{comment}
 
 Then, we have
 
@@ -1063,19 +1274,23 @@ t + a 32 (t) | (x 2 (t − τ) − y 2 (t − τ) | + a 33 2 (s + τ)ds[r 3 (t) 
 + a 31 (t)M 1 + a 32 (t)M 2 + (a 33 1 (t) + a 33 2 (t))M 3 + d 3 (t)N 3 ] | x 3 (t) − y 3 (t) |
 
 + τM 3 a 33 2m [a 31 (t) | x 1 (t − τ) − y 1 (t − τ) | + a 32 (t) | x 2 (t − τ) − y 2 (t − τ) |
-\end{comment}
 
 (48)
 
 + a 33 2 (t) | x 3 (t − τ)−y 3 (t − τ) | ].
 
+\end{comment}
+
+
 Take
 
+\begin{comment}
 t V 33 (t) = (1 + τM 3 a 33 2m ) a 31 (w + τ) | x 1 (w) − y 1 (w) | dw ∫ t−τ
 
 t + (1 + τM 3 a 33 2m ) a 32 (w + τ) | x 2 (w) − y 2 (w) | dw ∫ t−τ
 
 t + τM 3 a 33 2m a 33 2 (w + τ) | x 3 (w) − y 3 (w) | dw. ∫ t−τ
+\end{comment}
 
 (49)
 
@@ -1169,9 +1384,12 @@ u3
 
 \end{comment}
 
-Take ln v 3 (t) | , and calculate the upper right derivative of V 4 (t), V 5 (t), V 6 (t), we have
+Take  v 3 (t) | , and calculate the upper right derivative of V 4 (t), V 5 (t), V 6 (t), we have
 
+\begin{comment}
 D + V 4 (t) ≤ sgn(u 1 (t) − v 1 (t))[−f 1 (t)(u 1 (t) − v 1 (t)) + q 1 (t)(x 1 (t) − y 1 (t))
+\end{comment}
+
 
 (52)
 
@@ -1197,58 +1415,60 @@ D + V 6 (t) ≤ sgn(u 3 (t) − v 3 (t))[−f 3 (t)(u 3 (t) − v 3 (t)) + q 3 (
 
 Moreover, we give a Lyapunov function as follows
 
-6 V(t) = ∑ V i (t), i=1
+\[
+V(t) = \sum_{i=1}^6  V_i(t),
+\]
 
 from (39), (45), (51)–(54), we can obtain
 
-3 D + V(t) ≤ − ∑ (A i (t) | x i (t) − y i (t) | + B i | u i (t) − v i (t) | ) i=1
+\[
+D^+ V(t) \leq - \sum_{i=1}^3 (A_i (t) | x_i(t) - y_i(t) | + B_i | u_i(t) - v_i (t) | ) 
+\]
 
 (55)
 
-for all t ≥ t + τ.
+for all $t \geq t + \tau$.
 
-In view of the conditions of Theorem 3.1, there exist a constant α > 0 and T∗  such that for all t ≥ T ∗ , it holds 
+In view of the conditions of Theorem 3.1, there exist a constant $\alpha > 0$ and $T^* \geq T + \tau$  such that for all $t \geq T^*$  , it holds 
 that
 
-≥
-
-T + τ
-
-A i (t) ≥ α > 0, B i ≥ α > 0, (i = 1, 2, 3).
+\[
+A_i(t) \geq \alpha > 0, B_i \alpha > 0, (i = 1, 2, 3).
+\]
 
 (56)
 
-Integrating from T ∗ to t on both sides of (55) and by (56), we have
+Integrating from $T^*$  to t on both sides of (55) and by (56), we have
 
-t 3 V(t) + α ( ∑ [ | x i (s) − y i (s) | + | u i (s) − v i (s) | ])ds ≤ V(T ∗ ) < + ∞. ∫ T ∗ i=1
+\[
+V(t) + \alpha \int_{T^*}^t ( \sum_{i=1}^3 [ | x_i(s) - y_i(s) | + | u_i (s) - v_i (s) | ])ds \leq V(T^*) < + \infty .
+\]
+
 
 (57)
 
-Therefore, V(t) is bounded on [T ∗ , + ∞), and we have
+Therefore, V(t) is bounded on $[T^* , + \infty)$, and we have
 
-∞ 3 V(T) ( [ | x i (t) − y i (t) | + | u i (t) − v i (t) | ])ds ≤ < + ∞. ∫ ∗ ∑ α T i=1
+\[
+\int_{T^*}^{\infty} ( \sum_{i=1}^3 [ | x_i(t) - y_i(t) | + | u_i (t) - v_i (t) | ])ds \leq \frac{V(T)}{\alpha} < + \infty
+\]
 
 (58)
 
 By (58), we have
 
-3 ∑ ( | x i (t) − y i (t) | + | u i (t) − v i (t) | ) ∈ L 1 (T, + ∞). i=1
+\[
+\sum_{i=1}^3 ( | x_i (t) - y_i (t) | + | u_i (t) - v_i (t) | ) \in  L^1 (T, + \infty).
+\]
 
 (59)
 
-3
 
-From the uniformity permanence of the system (12),
+From the uniformity permanence of the system (12), $\sum_{i=1}^3 [ | x_i (t) - y_i (t) | + | u_i(t)-v_i (t) | ]$ is uniformity continuous on $[T^*, + \infty)$. By Lemma 3.1, we can obtain
 
-∑
-
-i=1
-
-[ | x i (t) − y i (t) | + | u i (t)−
-
-v i (t) | ] is uniformity continuous on [T ∗ , + ∞). By Lemma 3.1, we can obtain
-
-lim | x i (t) − y i (t) | = 0, lim | u i (t) − v i (t) | = 0, (i = 1, 2, 3). t→ + ∞ t→ + ∞
+\[
+lim_{t \to + \infty} | x_i (t) - y_i(t) | = 0, \lim_{t \to + \infty} | u_i (t) - v_i (t) | = 0, (i = 1, 2, 3). 
+\]
 
 This completes the proof of Theorem 3.1.
 
@@ -1258,7 +1478,7 @@ In this section, we give some numerical simulations to support our theoretical a
 the following Lotka–Volterra competitivecompetitive–cooperative model with feedback controls and time delays and 
 choose the
 
-Figure 1. The numerical solution of systems (60) with the initial conditions (61) and τ = 0.075.
+Figure 1. The numerical solution of systems (60) with the initial conditions (61) and $\tau = 0.075$.
 
 periodic function as the coefficients of the model
 
@@ -1299,7 +1519,7 @@ B 1 ≈ 0.48, B 2 ≈ 0.49, B 3 ≈ 4.48.
 It is easy to show that the system (60) satisfies the conditions of Theorem 3.1. It follows from Theorem 3.1 that the 
 Lotka–Volterra competitive-competitive–cooperative model (60) is permanent and globally attractive. By employing the 
 software package MATLAB 7.1, we can solve the numerical solutions of the system (60) which are shown in Figures 1–3. 
-Figure 1 shows that the permanence of the systems (60) with time delay τ = 0.075 and the
+Figure 1 shows that the permanence of the systems (60) with time delay $\tau = 0.075$ and the
 
 initial conditions
 
