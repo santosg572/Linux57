@@ -1,12 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.9.8)  7 DEC 2025 14:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.9.8)  10 DEC 2025 03:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Dynamical_behaviour_Lotka_Volterra_competitive-competitive_cooperative_model_
-feedback_controls_time_delays.tex
-
-(./Dynamical_behaviour_Lotka_Volterra_competitive-competitive_cooperative_model
-_feedback_controls_time_delays.tex
+**articulo.tex
+(./articulo.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -93,10 +90,8 @@ File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count271
 \l__pdf_internal_box=\box52
 )
-No file Dynamical_behaviour_Lotka_Volterra_competitive-competitive_cooperative_
-model_feedback_controls_time_delays.aux.
-\openout1 = `Dynamical_behaviour_Lotka_Volterra_competitive-competitive_coopera
-tive_model_feedback_controls_time_delays.aux'.
+No file articulo.aux.
+\openout1 = `articulo.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
 LaTeX Font Info:    ... okay on input line 6.
@@ -240,33 +235,55 @@ Excluding 'comment' comment. [12] Excluding 'comment' comment.
 Excluding 'comment' comment. Excluding 'comment' comment.
 Excluding 'comment' comment. Excluding 'comment' comment.
 Excluding 'comment' comment. [13] Excluding 'comment' comment.
-Excluding 'comment' comment. [14] [15] [16] [17] [18]
-(./Dynamical_behaviour_Lotka_Volterra_competitive-competitive_cooperative_model
-_feedback_controls_time_delays.aux) ) 
+Excluding 'comment' comment. [14] [15] [16]
+Overfull \hbox (1.51408pt too wide) in paragraph at lines 1603--1605
+\OT1/cmr/m/n/12 species food-chain model with Holling type-II func-tional re-sp
+onse, Appl.
+ []
+
+
+Overfull \hbox (1.41077pt too wide) in paragraph at lines 1609--1611
+\OT1/cmr/m/n/12 with Hassell-Varley-type func-tional re-sponse, C. R. Biol. 338
+ (4) (2015),
+ []
+
+
+Overfull \hbox (1.1802pt too wide) in paragraph at lines 1627--1629
+\OT1/cmr/m/n/12 com-pe-ti-tion sys-tem with feed-back con-trols, Non-lin-ear An
+al. Real World
+ []
+
+[17]
+Overfull \hbox (5.19313pt too wide) in paragraph at lines 1633--1635
+[]\OT1/cmr/m/n/12 C.Y. Wang, X.W. Li, and H. Yuan, The per-ma-nence of a ratio-
+dependent
+ []
+
+[18] [19] (./articulo.aux) ) 
 Here is how much of TeX's memory you used:
- 1180 strings out of 480247
- 19022 string characters out of 5896152
- 314499 words of memory out of 5000000
- 19174 multiletter control sequences out of 15000+600000
- 473683 words of font info for 43 fonts, out of 8000000 for 9000
+ 1182 strings out of 480247
+ 18161 string characters out of 5896152
+ 314303 words of memory out of 5000000
+ 19175 multiletter control sequences out of 15000+600000
+ 473990 words of font info for 44 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 54i,8n,62p,386b,128s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/santosg/.texlive2021/texmf-var/fon
-ts/pk/ljfour/jknappen/ec/tcrm1200.600pk></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Dynamical_behaviour_Lotka_Volterra_competitive-competitive_co
-operative_model_feedback_controls_time_delays.pdf (18 pages, 157135 bytes).
+ 54i,8n,62p,288b,182s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/santosg/.texlive2021/texmf-var/fonts/pk/ljf
+our/jknappen/ec/tcrm1200.600pk></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on articulo.pdf (19 pages, 166873 bytes).
 PDF statistics:
- 117 PDF objects out of 1000 (max. 8388607)
- 75 compressed objects within 1 object stream
+ 126 PDF objects out of 1000 (max. 8388607)
+ 81 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
